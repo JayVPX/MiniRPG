@@ -76,11 +76,12 @@ def warrior_path():
     print("UGA BUGA UGA")
 
 def mage_path():
-    vidaInicial = 50
+    vidaInicial = 30
     buffArmor = False
 
     time.sleep(2)
     # Intro do Mage
+    print("\n=== EXTERIOR DA TORRE DA LUA QUEBRADA ===\n")
     print("Após dias de viagem, você finalmente chega ao vale onde a torre se encontra.")
     print('A Torre da Lua Quebrada se ergue diante de você, mesmo parcialmente destruída, ainda é possível sentir a grandeza que um dia a torre já teve.')
     print('Runas antigas brilham fracamente nas paredes de pedra, você consegue sentir a mana instável pairando no ar ao seu redor.')
@@ -100,7 +101,7 @@ def mage_path():
 
     #Fourth 
     vida = mage_staircase(vida, buffArmor)
-
+    
 
 def rogue_path():
     print("ROUBEI E VAZEI")

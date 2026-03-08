@@ -1,7 +1,7 @@
 import random
 
 def random_damage(vida: float, armor: bool):
-    dano = random.randint(2,8)
+    dano = random.randint(1,5)
 
     if(armor):
         dano = round(dano * 0.8)
@@ -13,12 +13,12 @@ def random_damage(vida: float, armor: bool):
     return vida, dano
 
 def random_heal(vida: float):
-    heal = random.randint(5,10)
+    heal = random.randint(2,10)
     vida = vida + heal
     return vida, heal
 
 def show_life(vida):
-    print(f"Sua vida atual: {vida}/50")
+    print(f"Sua vida atual: {vida}/30")
 
 def logout():
     print("Opção inválida. Reinicie o jogo.")

@@ -37,7 +37,7 @@ def mage_start(vida: float, armor: bool):
         print()
         time.sleep(2)
 
-        print("O que você vai fazer?\n")
+        print("O que você faz?\n")
        
         print("1- Lutar contra os ratos.")
         print("2- Fugir.\n")
@@ -89,14 +89,15 @@ def mage_start(vida: float, armor: bool):
 
 ## Entrada na Torre
 def mage_tower_entrance(vida: float, armor: bool):
-    print()
+    print("\n=== INTERIOR DA TORRE DA LUA QUEBRADA ===\n")
+
     print("Ao entrar na magnifíca torre, você se depara com uma pequena sala com um corredor meio que instável")
     print("Vendo que esse era o único caminho, você não tem outra escolha, a não ser adentrar no corredor.")
     print("Runas antigas brilham no chão e você ouve sussurros ao seu redor, quase como se fosse uma interferência no ar causada pela mana.\n")
 
     time.sleep(2)
    
-    print("O que você deseja fazer?\n")
+    print("O que você faz?\n")
     
 
     print("1- Avançar cautelosamente pelo corredor.")
@@ -135,7 +136,7 @@ def mage_tower_entrance(vida: float, armor: bool):
         time.sleep(2)
         print()
 
-        print('O que você deseja fazer?\n')
+        print('O que você faz?\n')
         
         print("1- Atacar com feitiço médio.")
         print("2- Fugir.\n")
@@ -195,7 +196,8 @@ def mage_tower_entrance(vida: float, armor: bool):
         print('A parede ilusória desaparece, abrindo um caminho para uma sala iluminada, totalmente diferente do corredor anterior.\n')
 
         time.sleep(2)
-        print("O que você vai fazer? \n")
+        print("O que você faz? \n")
+
         print("1- Entrar na sala")
         print("2- Ir embora.\n")
 
@@ -205,7 +207,9 @@ def mage_tower_entrance(vida: float, armor: bool):
         time.sleep(1)
 
         if(respostaSecond == '1'):
-            print('Talvez a luz tenha te dado confiança, você entra na sala sem medo.')
+            print()
+            print('Talvez a luz tenha te dado confiança, você entra na sala sem medo.\n')
+
         elif(respostaSecond=='2'):
             print("Você sente que a missão está muito além da sua capacidade.")
             print("Você foge da torre, com sucesso.")
@@ -230,6 +234,8 @@ def mage_library(vida: float, armor: bool):
     time.sleep(2)
     print()
     print("Após atravessar o corredor, você chega a uma enorme biblioteca antiga.\n")
+    print("\n=== BIBLIOTECA DA LUA ETERNA ===\n")
+
     time.sleep(2)
     print("O teto é alto e desaparece na escuridão, sustentado por colunas de pedra cobertas por runas desgastadas.")
     print("Estantes gigantescas se estendem em todas as direções, repletas de livros antigos e pergaminhos empoeirados.")
@@ -245,7 +251,7 @@ def mage_library(vida: float, armor: bool):
     print("Você então se aproxima do altar, e encara os dois livros\n")
 
     time.sleep(2)
-    print("O que você vai fazer?\n")
+    print("O que você faz?\n")
 
     print("1- Abrir o livro da capa azul.")
     print("2- Abrir o livro da capa vermelho.")
@@ -275,7 +281,7 @@ def mage_library(vida: float, armor: bool):
         print("Você percebe, que não consegue correr diretamente para a entrada recém aberta, pois os livros estão sob ela.\n")
 
         time.sleep(3)
-        print("O que você vai fazer?\n")
+        print("O que você faz?\n")
         
         print("1- Lançar uma explosão arcana ao seu redor para destruir os livros")
         print("2- Usar magia arcana para empurrar os livros.")
@@ -399,6 +405,9 @@ def mage_laboratory(vida: float, armor: bool):
    
     time.sleep(3)
     print('Você adentra nessa sala secreta da torre.')
+
+    print("\n=== LABORATÓRIO DO ECLIPSE OCULTO ===\n")
+
     print("O cheiro forte de ervas queimadas e reagentes alquímicos invade suas narinas imediatamente.\n")
     time.sleep(2)
    
@@ -415,10 +424,10 @@ def mage_laboratory(vida: float, armor: bool):
 
   
     time.sleep(2)
-    print("O que você deseja fazer?\n")
+    print("O que você faz?\n")
 
     print("1- Vasculhar as estantes de bugigangas mágicas.")
-    print("2- Vasculhar as mesas de alquimia.")
+    print("2- Vasculhar as mesas de alquimia.\n")
     
     show_life(vida)
 
@@ -445,7 +454,7 @@ def mage_laboratory(vida: float, armor: bool):
 
         print("Você cuidadosamente guarda a bomba em sua mochila.")
         
-        vida, armor = mage_miniBoss(vida,armor)
+        vida = mage_miniBoss(vida,armor)
 
     elif(resposta =='2'):
         print()
@@ -468,7 +477,8 @@ def mage_laboratory(vida: float, armor: bool):
 
         print("Sua resistência aumentou.")
         armor = True
-        vida, armor = mage_miniBoss(vida, armor)
+
+        vida = mage_miniBoss(vida, armor)
 
     else:
         logout()
@@ -480,7 +490,8 @@ def mage_miniBoss(vida: float, armor: bool):
     time.sleep(3)
     print()
     
-    print("Você se prepara para deixar o laboratório.")
+    print("Você se prepara para deixar o laboratório.\n")
+
     print("Mas no momento em que se aproxima da saída, o chão da sala vibra levemente.")
     print("Runas antigas começam a brilhar nas paredes.")
     print('Uma enorme figura de pedra se move lentamente no canto escuro da sala.\n')
@@ -493,7 +504,7 @@ def mage_miniBoss(vida: float, armor: bool):
     print("Tempo suficiente para o Golem disparar uma pedra enorme em sua direção.\n")
 
     time.sleep(2)
-    print("O que você irá fazer?\n")
+    print("O que você faz?\n")
     
     print("1- Lançar um feitiço para destruir a pedra.")
     print("2- Lançar um feitiço para impedir a pedra.")
@@ -518,6 +529,7 @@ def mage_miniBoss(vida: float, armor: bool):
 
         print(f"Você recebeu {dano} de dano.")
         show_life(vida)     
+   
     elif(escolha == '2'):
         print()
         print("Rapidamente você se concentra no acúmulo de mana...")
@@ -534,6 +546,7 @@ def mage_miniBoss(vida: float, armor: bool):
         print(f"Você recebeu {dano} de dano.")
         show_life(vida)
         print()
+
     elif(escolha == '3'):
         print()
         print("Mesmo sendo um mago, você ainda consegue se movimentar.")
@@ -544,10 +557,12 @@ def mage_miniBoss(vida: float, armor: bool):
         print("De uma maneira nenhum pouco heróica ou épica de se ver, na verdade, bem desastrada e vergonhosa se pudesse ser descrita.")
         print("Entretanto, o importante é que funcionou...")
         print("Você vê a pedra colidir com o chão do seu lado, o impacto fez o chão tremer levemente, você suspira aliviado por não ter sido atingido.\n")
+       
     else:
         logout()
 
     time.sleep(2)
+    print()
     print("Se recuperando da última ação, você então encara o Golem.")
     print("A criatura mágnifica feita de pedra e mana, tamanho imponente e olhos brilhando em um tom de verde ameaçador.")
     print("Esta que nenhum momento parou de se mexer, e continua marchando em sua direção\n")
@@ -557,22 +572,342 @@ def mage_miniBoss(vida: float, armor: bool):
     print("Cada segundo que passa a criatura está cada vez mais próximo de você.\n")
     time.sleep(2)
 
-    print("O que você irá fazer?\n")
+    print("O que você faz?\n")
 
     print("1- Atacar diretamente o Golem.")
     print("2- Procurar alguma fraqueza no Golem.")
-    if(armor):
-        print("3- ")
+    print("3- Fugir\n")
     
-    print("4- Fugir")
+    show_life(vida)
+    
+    escolhaTwo = input("> ") 
+    time.sleep(1)
+    
+    print()
+
+    # 2º DECISÃO DA LUTA
+    if(escolhaTwo == '1'):
+        print()
+        print("Você então anda em direção ao Golem, afim de cortar um pouco a distância e otimizar seu ataque.")
+        print("Sentindo a magia fluir pelo seu corpo, você lança seu feitiço: Corte Arcano,")
+        print("Energia em forma de foices saem em direção ao Golem, atingindo a parte inferior do corpo da criatura.\n")
+        time.sleep(2)
+        
+        print("Faíscas saem do contato da magia com a superfície dura do Golem.")
+        print("O dano foi mínimo...")
+        print("O Golem reage imediatamente, levantando o braço para os céus.")
+        print('Não demora muito, para você ver o gigantesco braço descendo em sua direção.\n')
+        time.sleep(2)
+
+        print("O que você faz?\n")
+
+        print("1- Tentar bloquear o golpe e dar um contra-golpe")
+       
+        if(armor == False):
+            print("2- Tentar desviar e dar um contra-golpe")
+            print("3- Utilizar a bomba mágica como contra-golpe\n")
+        else:
+            print('2- Tentar desviar e dar um contra-golpe')
+        show_life(vida)
+
+        escolhaThree = input("> ")
+        time.sleep(1)
+
+        if(escolhaThree == '1'):
+            print()
+            print("Quanto maior, mais lento... É assim que a realidade funciona.")
+            print("Antes do braço do Golem, colidir no chão, você consegue desviar recuando.")
+            print("Você levanta seu cajado para bloquear o ataque, na esperança de resistir e conseguir efetura um contra-golpe.")
+            print("O feitiço Proteção foi usado.")
+            print("A força do golem é monstruosa...\n")
+            time.sleep(2)
+
+
+            vida, dano = random_damage(vida, armor)
+            print(f"Você recebeu {dano} de dano")
+
+            show_life(vida)
+
+            print()
+            print("Seu corpo protesta de dor, mas o feitiço garante que você consiga se manter no lugar.\n")
+            print("Aproveitando a chance, de não ter sido mandado para o outro lado da sala pela força descomunal da criatura.")
+            print("Você lançar seu feitiço: Raio Arcano, a queima roupa no Golem.")
+
+        elif(escolhaThree == '2'):
+            print()
+            print("Quanto maior, mais lento... É assim que a realidade funciona.")
+            print("Antes do braço do Golem, colidir no chão, você consegue desviar recuando.")
+            print("Sem perder tempo, você lança seu feitiço: Raio Arcano")
+            print("A magia atinge em cheio o peito do Golem.\n")
   
-  
-    return vida, armor
+        elif(armor == False and escolhaThree =='3'):
+            print()
+            print("Você lembra da bomba mágica que pegou a alguns momentos atrás.")
+            print("Rapidamente você imbui ela com sua mana, e a joga em direção ao Golem...\n")
+
+            time.sleep(2)
+            print("Ao encostar no peito da criatura, uma onda de luz intensa se faz presente na biblioteca.")
+            print("Você fica cego instantaneamente")
+            print("Só pode ouvir...\n")
+            time.sleep(1)
+
+            print("BOOOOOM!\n")
+            time.sleep(1)
+
+            print("Logo, você sentiu uma onda de choque exercendo em seu corpo inteiro, fazendo você voar para o outro lado da sala.")
+            time.sleep(2)
+
+            print("Após alguns minutos desacordado, você levanta.")
+            print("A fadiga te consome, e seu corpo está dolorido.")
+            print("O Golem antes imponente, agora estraçalhado no chão com os seus pedaços.\n")
+
+            print("Mas a explosão não afetou apenas ele...")
+
+            vida, dano = random_damage(vida, armor)
+           
+            print(f"Você recebeu {dano} de dano.")
+            show_life(vida)
+
+            print()
+            print("Você segue para a saída do laboratório.")
+            return vida
+           
+        else:
+            logout()
+
+        # CAMINHO FINAL PARA CASO ESCOLHATHREE FOR 1 OU 2
+        if (escolhaThree in ('1','2')):
+            time.sleep(2)
+            print("Surpreendentemente, o Golem antes implacável, cambaleia para trás, permanecendo imóvel\n")
+            time.sleep(2)
+         
+            print("No centro do peito do grande Golem, habita agora um buraco, dentro dele, um orbe vívido em cor verde pulsa.")
+            print("Você achou o Núcleo do Golem.\n")
+            time.sleep(2)
+
+            print("O que você faz?\n")
+
+            print("1- Desferir um feitiço final no Núcleo.")
+            print("2- Se aproximar e tomar o núcleo do Golem.\n")
+
+            escolhaFour = input("> ")
+            time.sleep(1)
+
+            if(escolhaFour == '1'):
+                print()
+                print("Aproveitando o momento de fragilidade do gigante de pedra.")
+                print("Você se prepara para soltar seu feitiço: Míssil Arcano")
+                print("Com destino ao núcleo do Golem, você então libera seu feitiço.\n")
+                time.sleep(2)
+
+                print('O choque entre magia e núcleo acontece, você vê aquele orbe sendo dizimado em pedaços.')
+                print("E assim que o núcleo deixou de existir. O Golem desmorona.\n")
+                time.sleep(2)
+
+                print("Você derrotou o Golem Arcano.\n")
+                time.sleep(2)
+
+                print("Você encara os restos do que antes era um Golem implacável.")
+                print("Aliviado você, segue seu caminho para a saída do laboratório.")
+
+                return vida
+                
+
+            elif(escolhaFour == '2'):
+                print()
+                print("Aproveitando o momento de fragilidade do gigante de pedra.")
+                print("Você rapidamente se aproxima, visando aquele orbe de energia.")
+                print("Pulsando e brilhando em uma cor de verde vívido.\n")
+                time.sleep(2)
+
+                print("Você retira o núcleo do Golem, e instantaneamente o Golem desmorona.\n")
+                time.sleep(2)
+                
+                print("Você derrotou o Golem Arcano.\n")
+                time.sleep(2)
+
+                print("Você encara o núcleo na sua mão.")
+                print("E começa a sugar a energia presente dentro da esfera.")
+                print("Você sente a pura energia e vitalidade do orbe sendo transferida para seu corpo.\n")
+                time.sleep(2)
+
+                vida, heal = random_heal(vida)
+                print(f"Sua vida foi regenerada em {heal}")
+                show_life(vida)
+
+                print()
+                print("Com suas energias revitalizadas, você segue seu caminho para a saída do laboratório.")
+
+                return vida
+            else:
+                logout()
+
+    if (escolhaTwo =='2'):
+        print()
+        print("Você recua alguns passos e observa o golem.")
+        print("As runas em seu corpo pulsam em intervalos regulares.\n")
+        time.sleep(2)
+
+        print("De repente você percebe algo.")
+        print("No centro de seu peito há certas rachaduras, mas elas são largas o bastante para você ver um certo objeto dentro dela.")
+        print("Era um orbe pulsando e brilhando numa cor vívida de verde.\n")
+        time.sleep(2)
+
+
+        print("Você encontrou o Núcleo do Golem!")
+        time.sleep(2)
+
+        print("O golem continua avançando lentamente em sua direção.\n")
+        time.sleep(2)
+
+        print("O que você faz?\n")
+
+        print("1- Lançar magia suprema no núcleo.")
+        print("2- Usar magia de conteção ao redor do Golem. ")
+        
+
+        if(armor == False):
+            print("3- Utilizar bomba mágica contra o Golem. ")
+            print("4- Tentar conectar sua mente com o núcleo do Golem.\n")
+        else:
+            print("3- Tentar conectar sua mente com o núcleo do Golem.\n")
+        escolhaThree = input("> ")
+        time.sleep(1)
+
+        if(escolhaThree =='1'):
+            print()
+            print("Você sabe onde está o núcleo, porém ainda está protegido pela camada de rocha do Golem.")
+            print("Decidido a acabar com isso, você ergue seu cajado preparando para lançar um dos seus feitiços supremos: Lança Prismática\n")
+            time.sleep(2)
+
+            print("Runas arcanas começam a girar ao seu redor, o ar se distorce e um feixe multicolorido surge em suas mãos.")
+            print("A energia cresce em intensidade, cada cor da lança pulsa como se fosse um fragmento de estrela.")
+            print("Com um gesto firme, você dispara a Lança Prismática contra o peito do Golem!\n")
+
+            print("A lança de energia atravessa a camada de rocha, perfura o núcleo e o colosso solta um rugido metálico antes de desmoronar.")
+            print("Mas o poder é grande demais... a magia retorna em um choque violento.")
+            print("Seu corpo é atingido pelo recoil, queimaduras arcanas marcam sua pele e sua respiração fica pesada.\n")
+            
+            vida, dano = random_damage(vida,armor)
+            print(f'Você recebeu {dano} de dano.')
+            show_life(vida)
+
+            print()
+            print("Mesmo ferido, você sabe que venceu, o núcleo foi destruído e o Golem não se erguerá novamente.")
+            print("Você continua seu caminho para fora do laboratório.")
+
+            return vida
+       
+        elif(escolhaThree == '2'):
+            print()
+            print("Você decide que não pode enfrentar o poder bruto do Golem diretamente.")
+            print("Levantando seu cajado, você canaliza e solta o feitiço: Correntes Arcanas\n")
+            time.sleep(2)
+
+            print("Traça runas de contenção no ar e correntes arcanas surgem, envolvendo o colosso.")
+            print("O Golem luta, mas as correntes se apertam cada vez mais, esmagando sua estrutura.\n")
+            time.sleep(2)
+
+            print("Com um estrondo, o núcleo é comprimido até se despedaçar dentro do peito da criatura.")
+            print("O Golem cai imóvel, derrotado pela força da contenção arcana.\n")
+
+            print("Você derrotou o Golem.\n")
+
+            print("Encarando os restos da criatura, você caminha para a saída do laboratório.")
+            return vida
+
+        elif(armor == False and escolhaThree == '3'):
+            print()
+            print("Você lembra da bomba mágica que pegou a alguns momentos atrás.")
+            print("Rapidamente você imbui ela com sua mana, e a joga em direção ao Golem...\n")
+
+            time.sleep(2)
+            print("Ao encostar no peito da criatura, uma onda de luz intensa se faz presente na biblioteca.")
+            print("Você fica cego instantaneamente")
+            print("Só pode ouvir...\n")
+            time.sleep(1)
+
+            print("BOOOOOM!\n")
+            time.sleep(1)
+
+            print("Mesmo de longe, você sente uma onda de choque exercendo em seu corpo inteiro, fazendo você cair para trás\n")
+            time.sleep(2)
+
+            print("Ao abrir os olhos, onde havia o Golem de pé, implacável e imponente. Agora restava apenas fragmentos de pedra no chão.")
+            print("Você derrotou o Golem Arcano.\n")
+            time.sleep(2)
+
+            print("Encarando os restos da criatura, você caminha para a saída do laboratório.")
+            return vida
+        
+        elif(armor == True and escolhaThree =='3'):
+            print()
+            print("Você decide que não pode enfrentar o poder bruto do Golem diretamente.")
+            print("Você fecha os olhos e conecta sua mente ao núcleo pulsante do Golem.\n")
+            time.sleep(2)
+
+            print("Uma voz antiga ecoa: 'Liberta-me e eu cessarei minha fúria.'")
+            print("Canalizando sua energia, você desfaz as runas que prendem o espírito dentro do orbe.\n")
+            time.sleep(2)
+
+            print("O núcleo se apaga lentamente, e o colosso para de se mover, como se tivesse encontrado paz.")
+            print("Você não destruiu o Golem, mas o libertou — e ele não lutará mais contra você.\n")
+
+            print("Porém ao libertar o espírito, uma onda de memórias e dor invade sua mente.\n")
+            vida, dano = random_damage(vida, armor)
+            print(f"Você recebeu {dano} de dano psíquico.")
+            show_life(vida)
+
+            print()
+            print("Após se recuperar dessa onda psíquica, você caminha para fora do laboratório.")
+            return vida
+
+        elif(armor == False and escolhaThree == '4'):
+            print()
+            print("Você decide que não pode enfrentar o poder bruto do Golem diretamente.")
+            print("Você fecha os olhos e conecta sua mente ao núcleo pulsante do Golem.\n")
+            time.sleep(2)
+
+            print("Uma voz antiga ecoa: 'Liberta-me e eu cessarei minha fúria.'")
+            print("Canalizando sua energia, você desfaz as runas que prendem o espírito dentro do orbe.\n")
+            time.sleep(2)
+
+            print("O núcleo se apaga lentamente, e o colosso para de se mover, como se tivesse encontrado paz.")
+            print("Você não destruiu o Golem, mas o libertou — e ele não lutará mais contra você.\n")
+
+            print("Porém ao libertar o espírito, uma onda de memórias e dor invade sua mente.\n")
+            vida, dano = random_damage(vida, armor)
+            print(f"Você recebeu {dano} de dano psíquico.")
+            show_life(vida)
+
+            print()
+            print("Após se recuperar dessa onda psíquica, você caminha para fora do laboratório.")
+            return vida
+        
+        else:
+            logout()
+   
+    if(escolhaTwo == '3'):
+        print()
+        print("Diante do colosso de pedra você treme de medo.")
+        print("Você foge da torre, com sucesso.")
+        print("Tudo bem, ninguém irá lhe julgar, magos não são conhecidos exatamente pela coragem...")
+        print("GAME OVER")
+        exit()
+   
+    else:
+        logout()
+    
+
+    return vida, 
 
 ## Escadaria
 def mage_staircase(vida: float, armor: bool):
-    print(f'OI CARA PELO AMOR TOMA ESSA COISA AQUI: {armor}')
-
+    
+    print("\n=== ESCADARIA DA TORRE === \n")
+    
+    show_life(vida)
+    print(f"ARMOR LEGAL: {armor}")
     return vida
 
 
