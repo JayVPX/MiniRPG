@@ -13,7 +13,7 @@ def mage_start(vida: float, armor: bool):
 
     print("O que você faz?")
     print()
-    print("1- Lança um feitiço simples no rato.")
+    print("1- Lançar um feitiço simples no rato.")
     print("2- Observar a criatura antes de atacar. ")
     print("3- Afugentar o rato com magia.")
     print("4- Fugir.\n")
@@ -236,7 +236,6 @@ def mage_library(vida: float, armor: bool):
     print("Após atravessar o corredor, você chega a uma enorme biblioteca antiga.\n")
     print("\n=== BIBLIOTECA DA LUA ETERNA ===\n")
 
-    time.sleep(2)
     print("O teto é alto e desaparece na escuridão, sustentado por colunas de pedra cobertas por runas desgastadas.")
     print("Estantes gigantescas se estendem em todas as direções, repletas de livros antigos e pergaminhos empoeirados.")
     print("Alguns livros parecem vibrar levemente, como se ainda estivessem carregados de magia.\n")
@@ -264,6 +263,7 @@ def mage_library(vida: float, armor: bool):
 
     # Abrir Livro Azul
     if (resposta == '1'):
+        print()
         print("Com certo receio, você então aproxima sua mão ao livro de azul...")
         print("O silêncio anormal da biblioteca, faz você ouvir seus batimentos e respiração tão altos, como se fosse música na taverna mais animada de Valtherra.\n")
       
@@ -899,18 +899,238 @@ def mage_miniBoss(vida: float, armor: bool):
         logout()
     
 
+    print()
+    time.sleep(2)
+    print('Ao passar da saída do laboratório.')
+    print("Um círculo mágico aparece instantaneamente no seu pé.")
+    print("Você percebe que é um círculo mágica de teletransporte.")
+    print("Sem ter o que fazer, você apenas aceita o destino, temendo no que pode estar a vir.\n")
+
+    print('...\n')
+ 
+    print('...\n')
+ 
+    print('...\n')
+
+
+
+
     return vida, 
 
 ## Escadaria
 def mage_staircase(vida: float, armor: bool):
+    time.sleep(2)
+    print()
+    print("Após deixar a biblioteca para trás, você chega em uma nova sala.\n")
+  
+
+    print("\n=== ESCADARIA DA TORRE ===\n")
+
+    print("A sala é vasta...")
+    print("No centro dela se ergue uma enorme escadaria de pedra em formato espiral, subindo em direção aos andares superiores da torre.")
+    print("Os degraus são largos, mas desgastados pelo tempo, alguns até parcialmente quebrados.")
+    print("Runas antigas estão gravadas nas laterais da escadaria, porém muitas delas estão apagadas ou rachadas.\n")
+    time.sleep(2)
     
-    print("\n=== ESCADARIA DA TORRE === \n")
-    
+    print("Uma fraca luz azulada desce dos andares superiores, iluminando parcialmente o caminho.")
+    print("O resto do ambiente permanece mergulhado em sombras profundas.\n")
+
+
+    print("O silêncio aqui é estranho.")
+    print("Não há vento ou criaturas.")
+    print("Ao lado da base dos primeiros degraus há várias estátuas antigas de guerreiros.")
+    time.sleep(2)
+
+    print("Cada uma delas veste uma armadura completa e segura armas enferrujadas.")
+    print("Todas estão imóveis, cobertas de poeira e teias de aranha.")
+    print("Você começa a subir lentamente os degraus da escadaria.")
+    print("Cada passo ecoa pela sala.\n")
+    time.sleep(2)
+
+    print("Quando você alcança aproximadamente metade da escadaria, uma sensação estranha percorre sua espinha.")
+    print("Você para por um instante, mas logo volta a subir as escadas.\n")
+    time.sleep(2)
+
+    print("Um som metálico ecoa lentamente atrás de você...")
+    print("Sem você saber, uma das armaduras do começo estava ali, atrás de você.")
+    print("Armadura sem corpo nenhum para vesti-la, com uma aura sombria entorno dela.\n")
+
+    print("Uma Armadura Amaldiçoada apareceu.\n")
+    time.sleep(2)
+
+    print("O que você faz?\n")
+
+    print("1- Atacar incessantemente com feitiços contra a Armadura.")
+    print("2- Usar feitiço de contenção contra a Armadura.")
+    print("3- Tentar purificar a maldição\n")
+  
     show_life(vida)
-    print(f"ARMOR LEGAL: {armor}")
+
+    resposta = input("> ")
+    time.sleep(1)
+
+    if(resposta == '1'):
+        print()
+        print("Decidido a não dar espaço para a criatura reagir, você ergue seu cajado e começa a canalizar mana sem parar.")
+
+        print("Faíscas arcanas se formam ao seu redor enquanto você dispara inumeros feitiços: Míssil Arcano, contra a Armadura Amaldiçoada.")
+        print("Os feitiços colidem contra a armadura, espalhando faíscas azuis e fragmentos de magia pelo ar.")
+        print("A criatura cambaleia alguns passos, mas continua avançando lentamente.\n")
+        time.sleep(2)
+     
+        print("De repente, runas sombrias gravadas no interior da armadura começam a brilhar.")
+        print("Parte da energia mágica que você lança ricocheteia de volta em sua direção.")
+        print("A maldição que anima aquela armadura também reflete parte do poder arcano.\n")
+        time.sleep(2)
+     
+        print("A onda de energia te atinge de volta.")
+
+        vida, dano = random_damage(vida, armor)
+
+        print(f"Você recebeu {dano} de dano.")
+        show_life(vida)
+
+        print()
+        print("Ignorando a dor, você continua atacando.")
+        print("A estrutura da armadura começa a rachar.")
+        print("O metal antigo não suporta tanta energia arcana.\n")
+        time.sleep(2)
+   
+        print("Com um último disparo de energia concentrada...")
+        print("A Armadura Amaldiçoada se despedaça em dezenas de peças de metal espalhadas pela escadaria.\n")
+        time.sleep(2)
+
+        print("A energia sombria que a animava se dissipa lentamente no ar.")
+        print("A escadaria está livre novamente. E você continua seu caminho.")
+   
+    elif(resposta == '2'):
+
+        print()
+        print("Você percebe que destruir aquela criatura apenas com força bruta pode ser arriscado.")
+        print("Em vez disso, você decide usar seu conhecimento arcano.")
+        print("Erguendo o cajado, você começa a traçar símbolos mágicos no ar, preparado você utiliza seu feitiço: Correntes Arcanas.\n")
+        time.sleep(2)
+     
+        print("Runas de contenção surgem ao redor da Armadura Amaldiçoada.")
+        print("Correntes de energia azulada disparam do chão e das paredes da escadaria.")
+        print("As correntes arcanas se enrolam na armadura.")
+        print("A criatura luta para se libertar, movendo seu corpo pesado de metal.")
+        print("Mas as correntes mágicas apertam cada vez mais.\n")
+        time.sleep(2)
+
+   
+        print("Agora imobilizada, a armadura não consegue avançar.")
+        print("Você aproveita a oportunidade.")
+        print("Canalizando sua mana uma última vez, você prepara um feitiço destrutivo: Raio Arcano")
+        print("Um feixe concentrado de energia dispara diretamente contra o peito da armadura.")
+        print("A magia atravessa o metal antigo e atinge o núcleo da maldição que a anima.\n")
+        time.sleep(2)
+
+        print("A armadura perde toda a força de repente.")
+        print("As correntes desaparecem enquanto o metal cai inerte pelos degraus da escadaria.")
+
+        print()
+        print("A maldição foi destruída e a escadaria está livre.")
+        print("Você segue as escadas.")
+
+    elif(resposta =='3'):
+        print()
+        print("Talvez destruir a armadura não seja a única solução.")
+        print("Você fecha os olhos e começa a canalizar uma magia diferente.")
+        print("Purificarz\n")
+
+        
+        print("Runas luminosas começam a surgir ao seu redor.")
+        print("Uma luz suave envolve a escadaria enquanto você estende sua mão em direção à armadura.")
+        print("A criatura para de se mover.\n")
+
+
+        print("Você força mais energia para dentro do feitiço.")
+        print("A luz invade a armadura, penetrando as runas da maldição.")
+        print("A criatura começa a tremer violentamente.")
+
+        print("Uma onda de energia sombria explode da armadura e invade sua mente.")
+
+        vida, dano = random_damage(vida, armor)
+
+        print(f"Você recebeu {dano} de dano mental.")
+        show_life(vida)
+
+        print()
+        print("Memórias fragmentadas atravessam sua consciência.\n")
+
+        print("Um antigo cavaleiro.")
+        print("Um juramento.")
+        print("Uma maldição lançada há décadas.\n")
+        time.sleep(2)
+      
+        print("Com um último esforço, você completa o ritual.")
+        print("A luz purificadora envolve completamente a armadura.")
+
+        print()
+        print("O metal cai lentamente no chão.")
+        print("A alma presa finalmente foi libertada.")
+        print("A escadaria volta ao silêncio, agora, sem nenhuma ameaça a frente.")
+        print("Você segue seu caminho na escada.")
+
+    else:
+        logout()
+
     return vida
 
+# SALA BOSS
+def mage_boss_fight(vida: float, armor: bool):
+
+    ## INTRO DA SALA ANTES DO BOSS
+
+    time.sleep(2)
+    print()
+    print("Você se vê agora numa nova sala, não há nenhum lugar acima de onde você está.")
+    print("Logo você entende que chegou no último andar da torre.")
+    time.sleep(2)
+
+    print("\n=== SALA DO LIMIAR ARCANO ===\n")
+
+    print("O teto é alto e parcialmente destruído, permitindo que a luz pálida da lua atravesse as ruínas.")
+    print("Partículas de poeira flutuam lentamente pelo ar, iluminadas pela luz prateada.")
+    print("As paredes estão rachadas pelo tempo.")
+    print("Estátuas quebradas de antigos magos observam a sala com rostos frios e desgastados.")
+    print("Algumas perderam a cabeça, outras os braços, mas todas parecem apontar para o mesmo lugar.\n")
+    time.sleep(2)
+
+    print()
+    print("Para a única porta da sala.")
+    print()
+
+    time.sleep(2)
+    print("Uma enorme porta de pedra negra na extremidade oposta do salão.")
+    print("Runas complexas percorrem toda a sua superfície, pulsando lentamente com energia arcana.\n")
+    
+    
+    print("Mesmo à distância, você consegue sentir a pressão mágica emanando de trás daquela porta.\n")
 
 
+    print("O ar aqui é pesado.")
+    print("Denso com mana instável.\n")
+
+   
+    print("Seu instinto de mago grita um aviso claro:\n")
+
+    print("Algo poderoso está do outro lado.\n")
+
+    print("Talvez o responsável pela corrupção que tomou esta torre.\n")
+
+    print("Seja o que for que habite além daquela porta...")
+    print("Este é o último obstáculo da Torre da Lua Quebrada.\n")
+    time.sleep(2)
+
+    # Entrando na sala do boss
+
+    print()
+    print("Mesmo receoso, você abre aquela enorme porta de pedra...")
+    print("O som é incessante e o peso era incômodo, mas ainda assim você consegue abrir.")
+    print("Sabendo que agora não tem como voltar, você passa por ela.\n")
+
+    print("\n=== APOSENTOS DO ARQUIMAGO ===\n")
 
 

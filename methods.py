@@ -97,12 +97,14 @@ def mage_path():
 
     # Local de partida baseado na Segunda Escolha
     if(secondStepResposta in ('1','2')):
-        vida, buffArmor = mage_library(vida, buffArmor)         #Caminho para biblioteca
+        vida, buffArmor = mage_library(vida, buffArmor)  # Caminho para Biblioteca
+        vida = mage_staircase(vida, buffArmor)           #Depois vai para a Escadaria
+    
     elif(secondStepResposta =="3"):
         vida, buffArmor = mage_laboratory(vida, buffArmor)      #Caminho para laboratório secreto
-
-    #Fourth 
-    vida = mage_staircase(vida, buffArmor)
+     
+    mage_boss_fight(vida, buffArmor) #BOSS FIGHT
+    
     
 
 def rogue_path():
