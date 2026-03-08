@@ -31,6 +31,7 @@ def rogue_start(vida: float, armor: bool):
     resposta = input("> ")
     time.sleep(1)
 
+    poisoned = 0
     if (resposta == '1'):
         print()
         print("Você se sente confiante, traz consigo, em sua cintura, sua espada curta, leve e rápida, que acompanhou você nos diversos embates que teve durante sua vida de aventureiro.")
@@ -44,6 +45,7 @@ def rogue_start(vida: float, armor: bool):
         print("Infelizmente, sua falta de cautela é respondida com uma aranha pulando no seu peito direito e perfurando suas presas no seu pescoço.")
         print("Ela era relativamente grande em relação ao tamanho de aranhas comuns.")
         print("possuía um corpo majoritariamente negro como a escuridão, com detalhes púrpuros chamativos, e olhos escarlates que transpareciam um perigo mortal.")
+        poisoned = 1
 
         time.sleep(2)
         print()
@@ -95,7 +97,7 @@ def rogue_start(vida: float, armor: bool):
     else:
         logout()
     
-    return vida
+    return vida, poisoned
     
 
 ## Entrada nas Catacumbas
@@ -154,6 +156,7 @@ def dark_corridor(vida: float, armor: bool):
     resposta = input("> ")
     time.sleep(1)
 
+    beast_defeated = 0
     if (resposta == '1'):
         print()
         print("Você agacha e examina no que você está em pisando.")
@@ -161,19 +164,23 @@ def dark_corridor(vida: float, armor: bool):
         print("Você está em cima de um cadáver morto, cheio de marcas de garras sangrando pelo corpo.")
         print("Você não consegue conter o susto que você tomou a ver essa cena pesada.")
         print("Seu susto acordou algo, algo com passos pesados, bufando como uma fera, mas impossível de identificar naquela escuridão.")
-        vida = beast_encounter(vida, armor)
+        vida, beast_defeated = beast_encounter(vida, armor)
     elif (resposta == '2'):
         print()
         print("Você ignora complementamente sobre o que você está pisando e se mantém focado em prosseguir cautelosamente enquanto se escora pela parede daquilo que parece ser um corredor bem extenso.")
         print("Você caminha pacientemente através daquela escuridão, até encontrar o que parece ser o fim daquele corredor silencioso e vazio.")
-        print("Você encontra numa sala iluminada.")
     else:
         logout()
     
-    return vida
+    print()
+    print("Você após muito caminhar por aquele corredor escuro, se encontra numa sala estranhamente bem iluminada")
+    
+    return vida, beast_defeated
 
 ## Encontro com a monstruosidade
 def beast_encounter(vida: float, armor: bool):
+
+    beast_defeated = 0
 
     time.sleep(2)
     print()
@@ -243,7 +250,7 @@ def beast_encounter(vida: float, armor: bool):
         time.sleep(1)
         print()
         print("E, neste momento, ele claramente decidiu que você será sua próxima refeição.")
-        vida = beast_battle(vida, armor)
+        vida, beast_defeated = beast_battle(vida, armor)
     elif (resposta == '2'):
         print("Você, mesmo naquela escuridão e sem visão do ser perigoso que está na sua frente, atira uma flecha contra aquela criatura usando sua besta.")
         print("Pela aparente grande extensão da criatura, deduzida pelos passos pesados e rosnar robusto, era praticamente impossível errar.")
@@ -514,7 +521,867 @@ def beast_encounter(vida: float, armor: bool):
     else:
         logout()
 
-    return vida
+    return vida, beast_defeated
 
 def beast_battle(vida: float, armor: bool):
-    return vida
+
+    beast_defeated = 0
+
+    print()
+    print("O Leão Sombrio de Eldritch abaixa o corpo, preparando-se para avançar.")
+
+    time.sleep(1)
+    print()
+    print("A tocha ilumina suas presas manchadas de sangue enquanto ele rosna profundamente.")
+    print("Seus músculos se contraem como molas prestes a disparar.")
+
+    time.sleep(2)
+    print("Ele salta.")
+    print("Você mal tem tempo de reagir.")
+
+    time.sleep(2)
+    print()
+    print("O que você faz?")
+    print()
+    print("1- Atirar com a besta")
+    print("2- Arremessar facas")
+    print("3- Atacar com a espada\n")
+
+    show_life(vida)
+    resposta = input("> ")
+    time.sleep(1)
+
+    if (resposta == '1'):
+        print("Você levanta rapidamente sua besta leve e dispara.")
+
+        time.sleep(1)
+        print()
+        print("A flecha corta o ar e atinge o ombro da criatura.")
+
+        time.sleep(1)
+        print()
+        print("O leão ruge de dor, mas não para.")
+
+        time.sleep(1)
+        print()
+        print("Ele se choca contra você com brutalidade, derrubando você contra a parede de pedra.")
+
+        vida, dano = random_damage(vida, armor)
+        print(f'Você recebeu {dano} de dano')
+        show_life(vida)
+        print()
+
+        print()
+        print("Você consegue se levantar antes que ele ataque novamente.")
+
+        time.sleep(2)
+        print()
+        print("O que você faz?")
+        print()
+        print("1- Atacar os olhos com a espada")
+        print("2- Tentar manter distância")
+
+        show_life(vida)
+        resposta = input("> ")
+        time.sleep(1)
+
+        if (resposta == '1'):
+            print("Você avança rapidamente.")
+
+            time.sleep(1)
+            print()
+            print("O leão tenta mordê-lo, mas sua agilidade de ladino é maior.")
+
+            time.sleep(1)
+            print()
+            print("Você desliza para o lado e crava sua espada diretamente em um dos olhos da criatura.")
+
+            time.sleep(1)
+            print()
+            print("O rugido da fera ecoa por toda a catacumba.")
+            
+            time.sleep(1)
+            print()
+            print("Cega de um lado, a criatura se debate violentamente.")
+
+            time.sleep(1)
+            print()
+            print("Ela consegue atingir você com uma de suas patas.")
+            print("Que devido a sua agilidade na reação, causa apenas um corte não tão profundo na lateral da sua barriga")
+
+            vida, dano = random_damage(vida, armor)
+            print(f'Você recebeu {dano} de dano')
+            show_life(vida)
+            print()
+
+            time.sleep(1)
+            print("Mas agora ela está vulnerável.")
+
+            time.sleep(2)
+            print()
+            print("O que você faz?")
+            print()
+            print("1- Tentar cortar sua garanta")
+            print("2- Tentar cortar o tendão de sua pata dianteira\n")
+
+            show_life(vida)
+            resposta = input("> ")
+            time.sleep(1)
+
+            if (resposta == '1'):
+                print("Você gira a espada e a crava profundamente no pescoço da criatura.")
+
+                time.sleep(1)
+                print()
+                print("Porém, inicialmente, sua espada fica presa lateral esquerda do pescoço dela e você não consegue cortar sua garganta")
+
+                time.sleep(1)
+                print()
+                print("Você é então respondido com um forte rugido devido a dor e a agonia que o Leão sente.")
+                print("Rugido o qual precede a tentativa de morder violentamente a cabeça do ser responsável por essa ferida profunda, que se encontra vulnerável a sua frente segurando a espada presa.")
+
+                time.sleep(2)
+                print()
+                print("Você não solta a espada.")
+                print("Essa é uma chance única de derrotar a criatura e sobreviver aquilo.")
+
+                time.sleep(2)
+                print()
+                print("Você desvia agilmente sua cabeça para o lado ainda segurando sua espada fincada no pescoço daquela monstruosidade.")
+
+                time.sleep(1)
+                print()
+                print("As presas erram completamente sua cabeça, mas presas perfuram seu ombro esquerda com muita ferocidade, fazendo você deixar cair a tocha da mão esquerda.")
+                vida, dano = random_damage(vida, armor)
+                print(f'Você recebeu {dano} de dano')
+                show_life(vida)
+                print()
+
+                time.sleep(1)
+                print()
+                print("Você grita, sangra e agoniza enquanto seu provável executor aplica mais força na mandibula.")
+                vida, dano = random_damage(vida, armor)
+                print(f'Você recebeu {dano} de dano')
+                show_life(vida)
+                print()
+
+                time.sleep(1)
+                print()
+                print("Você usa toda essa dor e ciência da morte iminente para dar tudo que seu corpo tem a oferecer.")
+
+                time.sleep(1)
+                print()
+                print("A mão esquerda nua agora segura sua espada juntamente com a direita, ambas aplicando força absurda contra a garganta da criatura que vai sendo cortada pouco a pouco")
+
+                time.sleep(1)
+                print()
+                print("Você grita dando tudo de si e a criatura rosna enquanto aplica cada vez mais pressão no ombro que espirra sangue para todos os lados")
+                vida, dano = random_damage(vida, armor)
+                print(f'Você recebeu {dano} de dano')
+                show_life(vida)
+                print()
+
+                time.sleep(2)
+                print()
+                print("Até que...")
+
+                time.sleep(1)
+                print()
+                print("Sua lâmina atravessa toda a garganta da criatura, escorrendo uma quantidade exorbitante de sangue negro do pescoço da mesma")
+
+                time.sleep(1)
+                print()
+                print("Sua mandíbula perde a força, sua patas não conseguem mais mantê-la de pé")
+
+                time.sleep(1)
+                print()
+                print("Após alguns segundos de agonia, o Leão Sombrio de Eldritch cai morto.")
+
+                time.sleep(1)
+                print()
+                print("Você respira fundo")
+
+                time.sleep(1)
+                print()
+                print("A luta terminou")
+                beast_defeated = 1
+
+            elif (resposta == '2'):
+                print("Você decide mirar na mobilidade da criatura.")
+
+                time.sleep(1)
+                print()
+                print("Em vez de insistir na garganta protegida pela força monstruosa do leão, você gira rapidamente o corpo e mira sua lâmina na pata dianteira da criatura.")
+
+                time.sleep(1)
+                print()
+                print("Sua espada corta profundamente atrás da articulação da pata.")
+
+                time.sleep(1)
+                print()
+                print("O tendão se rompe.")
+
+                time.sleep(1)
+                print()
+                print("O Leão Sombrio solta um rugido brutal enquanto sua pata falha e seu corpo colossal perde parte do equilíbrio.")
+
+                time.sleep(1)
+                print()
+                print("Mas a criatura ainda está longe de derrotada.")
+
+                time.sleep(1)
+                print()
+                print("Com um movimento violento, sua cauda espinhosa chicoteia o ar na sua direção.")
+
+                time.sleep(1)
+                print()
+                print("Os espinhos rasgam seu torso antes que você consiga se afastar completamente.")
+
+                vida, dano = random_damage(vida, armor)
+                print(f'Você recebeu {dano} de dano')
+                show_life(vida)
+                print()
+
+                time.sleep(1)
+                print("O leão agora manca, mas continua extremamente perigoso.")
+                print("Seu sangue negro escorre pela pedra enquanto ele se prepara para um último ataque.")
+
+                time.sleep(2)
+                print()
+                print("O que você faz?")
+                print()
+                print("1- Saltar sobre a criatura e cravar a espada em seu pescoço")
+                print("2- Disparar sua besta à queima-roupa\n")
+
+                show_life(vida)
+                resposta = input("> ")
+                time.sleep(1)
+
+                if (resposta == '1'):
+                    print("Você decide acabar com aquilo de uma vez.")
+
+                    time.sleep(1)
+                    print()
+                    print("Mesmo ferido, você avança contra a criatura manca.")
+
+                    time.sleep(1)
+                    print()
+                    print("O leão tenta erguer a pata saudável para atingir você...")
+
+                    time.sleep(1)
+                    print()
+                    print("Mas o peso do próprio corpo o trai.")
+
+                    time.sleep(1)
+                    print()
+                    print("Você salta sobre o dorso da criatura e crava sua espada profundamente em seu pescoço.")
+
+                    time.sleep(1)
+                    print()
+                    print("A lâmina atravessa músculos, carne e finalmente a garganta da fera.")
+
+                    time.sleep(1)
+                    print()
+                    print("O Leão Sombrio ruge uma última vez.")
+
+                    time.sleep(1)
+                    print()
+                    print("Seu corpo gigantesco se debate violentamente por alguns segundos.")
+
+                    time.sleep(1)
+                    print()
+                    print("Então ele desaba pesadamente no chão de pedra.")
+
+                    time.sleep(1)
+                    print()
+                    print("O predador das Catacumbas de Eldritch finalmente está morto.")
+
+                    beast_defeated = 1
+                elif (resposta == '2'):
+                    print("Você rapidamente larga a pressão da luta corpo a corpo.")
+
+                    time.sleep(1)
+                    print()
+                    print("Com movimentos rápidos, você puxa sua besta leve das costas.")
+
+                    time.sleep(1)
+                    print()
+                    print("O leão manca na sua direção, preparando um último salto.")
+
+                    time.sleep(1)
+                    print()
+                    print("Mas ele está lento demais.")
+
+                    time.sleep(1)
+                    print()
+                    print("Você aponta a besta diretamente para a cabeça da criatura.")
+
+                    time.sleep(1)
+                    print()
+                    print("E dispara.")
+
+                    time.sleep(1)
+                    print()
+                    print("A flecha atravessa o olho restante da fera e penetra profundamente em seu crânio.")
+
+                    time.sleep(1)
+                    print()
+                    print("O rugido que sai da criatura é curto.")
+
+                    time.sleep(1)
+                    print()
+                    print("Seu corpo colossal perde a força e cai pesadamente no chão.")
+
+                    time.sleep(1)
+                    print()
+                    print("O Leão Sombrio de Eldritch não se move mais.")
+
+                    beast_defeated = 1
+                else:
+                    logout()
+            else:
+                logout()
+
+        elif (resposta == '2'):
+            print("Você decide não se aproximar daquela monstruosidade.")
+
+            time.sleep(1)
+            print()
+            print("Em vez disso, começa a recuar lentamente enquanto mantém a espada pronta.")
+
+            time.sleep(1)
+            print()
+            print("O Leão Sombrio rosna profundamente e começa a circular você.")
+
+            time.sleep(1)
+            print()
+            print("Seus olhos vermelhos acompanham cada movimento seu.")
+
+            time.sleep(1)
+            print()
+            print("De repente ele salta.")
+
+            time.sleep(1)
+            print()
+            print("Você tenta recuar, mas uma de suas garras alcança seu peito.")
+
+            vida, dano = random_damage(vida, armor)
+            print(f'Você recebeu {dano} de dano')
+            show_life(vida)
+
+            print()
+            time.sleep(1)
+            print("Você consegue manter alguma distância novamente.")
+
+            time.sleep(2)
+            print()
+            print("O que você faz?")
+            print()
+            print("1- Sacar sua besta")
+            print("2- Esperar o ataque para contra-atacar\n")
+
+            show_life(vida)
+            resposta = input("> ")
+            time.sleep(1)
+
+            if (resposta == '1'):
+                print("Você rapidamente puxa sua besta das costas.")
+
+                time.sleep(1)
+                print()
+                print("O leão avança novamente.")
+
+                time.sleep(1)
+                print()
+                print("Você dispara.")
+
+                time.sleep(1)
+                print()
+                print("A flecha atinge o peito da criatura.")
+
+                time.sleep(1)
+                print()
+                print("Mas ele ainda alcança você.")
+
+                vida, dano = random_damage(vida, armor)
+                print(f'Você recebeu {dano} de dano')
+                show_life(vida)
+
+                time.sleep(1)
+                print()
+                print("A criatura está ferida, mas ainda luta.")
+
+                time.sleep(2)
+                print()
+                print("O que você faz?")
+                print()
+                print("1- Finalizar com espada")
+                print("2- Usar a tocha novamente\n")
+
+                show_life(vida)
+                resposta = input("> ")
+                time.sleep(1)
+
+                if (resposta == '1'):
+                    print("Você avança antes que a criatura recupere o equilíbrio.")
+
+                    time.sleep(1)
+                    print()
+                    print("Sua espada corta profundamente o pescoço da fera.")
+
+                    time.sleep(1)
+                    print()
+                    print("O sangue negro jorra pelo chão de pedra.")
+
+                    time.sleep(1)
+                    print()
+                    print("O Leão Sombrio tenta dar mais um passo...")
+
+                    time.sleep(1)
+                    print()
+                    print("Mas cai morto.")
+
+                    beast_defeated = 1
+                elif (resposta == '2'):
+                    print("Você rapidamente pega a tocha que havia deixado cair.")
+
+                    time.sleep(1)
+                    print()
+                    print("A criatura manca levemente por causa da flecha cravada em seu peito, mas ainda avança com ferocidade.")
+
+                    time.sleep(1)
+                    print()
+                    print("Quando o Leão Sombrio se aproxima novamente, você ergue a tocha diante do rosto da criatura.")
+
+                    time.sleep(1)
+                    print()
+                    print("As chamas iluminam suas presas ensanguentadas e os olhos vermelhos que agora encaram diretamente você.")
+
+                    time.sleep(1)
+                    print()
+                    print("O fogo toca sua pelagem negra.")
+
+                    time.sleep(1)
+                    print()
+                    print("A criatura solta um rugido furioso e recua um pouco, claramente incomodada com as chamas.")
+
+                    time.sleep(1)
+                    print()
+                    print("Mas isso não dura muito.")
+
+                    time.sleep(1)
+                    print()
+                    print("Com um movimento violento, a cauda espinhosa chicoteia o ar.")
+
+                    vida, dano = random_damage(vida, armor)
+                    print(f'Você recebeu {dano} de dano')
+                    show_life(vida)
+
+                    time.sleep(1)
+                    print()
+                    print("Os espinhos rasgam seu braço e quase fazem você largar a tocha novamente.")
+
+                    time.sleep(2)
+                    print()
+                    print("A criatura agora parece mais cautelosa... mas ainda mortal.")
+
+                    time.sleep(2)
+                    print()
+                    print("O que você faz?")
+                    print()
+                    print("1- Avançar com a espada enquanto ela hesita")
+                    print("2- Sacar a besta novamente e tentar um disparo final\n")
+
+                    show_life(vida)
+                    resposta = input("> ")
+                    time.sleep(1)
+
+                    if (resposta == '1'):
+                        print("Você decide aproveitar a hesitação da criatura.")
+
+                        time.sleep(1)
+                        print()
+                        print("Com um grito, você avança contra o Leão Sombrio.")
+
+                        time.sleep(1)
+                        print()
+                        print("Sua espada atravessa profundamente o pescoço da fera.")
+
+                        time.sleep(1)
+                        print()
+                        print("O sangue negro escorre violentamente sobre o chão de pedra.")
+
+                        time.sleep(1)
+                        print()
+                        print("A criatura tenta rugir novamente...")
+
+                        time.sleep(1)
+                        print()
+                        print("Mas apenas um som abafado sai de sua garganta destruída.")
+
+                        time.sleep(1)
+                        print()
+                        print("O corpo colossal da criatura treme por alguns segundos.")
+
+                        time.sleep(1)
+                        print()
+                        print("Então desaba pesadamente no chão.")
+
+                        time.sleep(1)
+                        print()
+                        print("O Leão Sombrio de Eldritch está morto.")
+
+                        beast_defeated = 1
+                    elif (resposta == '2'):
+                        print("Mesmo ferido, você decide confiar novamente em sua pontaria.")
+
+                        time.sleep(1)
+                        print()
+                        print("Você rapidamente puxa a besta das costas.")
+
+                        time.sleep(1)
+                        print()
+                        print("O leão percebe o movimento e avança mais uma vez.")
+
+                        time.sleep(1)
+                        print()
+                        print("Você aponta a arma diretamente para a cabeça da criatura.")
+
+                        time.sleep(1)
+                        print()
+                        print("E dispara.")
+
+                        time.sleep(1)
+                        print()
+                        print("A flecha atravessa o olho restante da criatura.")
+
+                        time.sleep(1)
+                        print()
+                        print("O rugido que ecoa pelas catacumbas é curto.")
+
+                        time.sleep(1)
+                        print()
+                        print("A força abandona o corpo gigantesco da fera.")
+
+                        time.sleep(1)
+                        print()
+                        print("O Leão Sombrio de Eldritch cai morto diante de você.")
+
+                        beast_defeated = 1
+                    else:
+                        logout()
+                else:
+                    logout()
+            elif (resposta == '2'):
+                print("Você firma os pés no chão de pedra.")
+
+                time.sleep(1)
+                print()
+                print("Em vez de atacar, você apenas observa.")
+
+                time.sleep(1)
+                print()
+                print("O Leão Sombrio rosna baixo, desconfiado.")
+
+                time.sleep(1)
+                print()
+                print("Seus olhos vermelhos brilham na escuridão enquanto ele começa a rodear você novamente.")
+
+                time.sleep(1)
+                print()
+                print("Então, sem aviso, ele salta.")
+
+                time.sleep(1)
+                print()
+                print("Você espera até o último segundo.")
+
+                time.sleep(1)
+                print()
+                print("As garras passam raspando por você...")
+
+                vida, dano = random_damage(vida, armor)
+                print(f'Você recebeu {dano} de dano')
+                show_life(vida)
+
+                time.sleep(1)
+                print()
+                print("Mas a criatura se expõe completamente no ataque.")
+
+                time.sleep(1)
+                print()
+                print("Essa é a sua chance.")
+
+                time.sleep(2)
+                print()
+                print("O que você faz?")
+                print()
+                print("1- Cravar a espada no peito da criatura")
+                print("2- Rolar para o lado e atacar o pescoço\n")
+
+                show_life(vida)
+                resposta = input("> ")
+                time.sleep(1)
+
+                if (resposta == '1'):
+                    print("Você segura firme sua espada.")
+
+                    time.sleep(1)
+                    print()
+                    print("Quando o peso da criatura cai sobre você...")
+
+                    time.sleep(1)
+                    print()
+                    print("Você empurra a lâmina diretamente para frente.")
+
+                    time.sleep(1)
+                    print()
+                    print("A espada atravessa profundamente o peito da fera.")
+
+                    time.sleep(1)
+                    print()
+                    print("O rugido que ecoa pelas catacumbas é curto e violento.")
+
+                    time.sleep(1)
+                    print()
+                    print("O Leão Sombrio tenta se levantar...")
+
+                    time.sleep(1)
+                    print()
+                    print("Mas suas forças desaparecem.")
+
+                    time.sleep(1)
+                    print()
+                    print("A criatura cai morta sobre o chão de pedra.")
+
+                    beast_defeated = 1
+
+                elif (resposta == '2'):
+                    print("No último segundo você se joga para o lado.")
+
+                    time.sleep(1)
+                    print()
+                    print("O corpo colossal da criatura passa por você.")
+
+                    time.sleep(1)
+                    print()
+                    print("Antes que ela consiga se virar...")
+
+                    time.sleep(1)
+                    print()
+                    print("Sua espada corta profundamente o pescoço da fera.")
+
+                    time.sleep(1)
+                    print()
+                    print("Sangue negro se espalha pelo chão.")
+
+                    time.sleep(1)
+                    print()
+                    print("O Leão Sombrio tenta rugir mais uma vez...")
+
+                    time.sleep(1)
+                    print()
+                    print("Mas apenas um som fraco escapa de sua garganta.")
+
+                    time.sleep(1)
+                    print()
+                    print("Então o monstro desaba, morto.")
+
+                    beast_defeated = 1
+                else:
+                    logout()
+            else:
+                logout()
+        else:
+            logout()
+    elif (resposta == '2'):
+        print("Você puxa rapidamente uma de suas facas.")
+
+        time.sleep(1)
+        print()
+        print("E a arremessa contra a criatura.")
+
+        time.sleep(1)
+        print()
+        print("A lâmina gira no ar.")
+
+        time.sleep(1)
+        print()
+        print("E atinge o flanco do Leão Sombrio.")
+
+        time.sleep(1)
+        print()
+        print("A reação é imediata.")
+
+        time.sleep(1)
+        print()
+        print("A criatura ruge com uma fúria brutal.")
+
+        time.sleep(1)
+        print()
+        print("Então dispara na sua direção.")
+
+        time.sleep(1)
+        print()
+        print("Você entende na mesma hora.")
+
+        time.sleep(1)
+        print()
+        print("Não dá para vencer aquilo aqui.")
+
+        time.sleep(1)
+        print()
+        print("Você corre.")
+
+        time.sleep(1)
+        print()
+        print("Os corredores das catacumbas passam borrados ao seu redor.")
+
+        time.sleep(1)
+        print()
+        print("Atrás de você, o som das patas da criatura se aproxima.")
+
+        time.sleep(1)
+        print()
+        print("Cada rugido parece mais perto.")
+
+        time.sleep(1)
+        print()
+        print("Uma garra gigantesca raspa a parede ao seu lado.")
+
+        time.sleep(1)
+        print()
+        print("Pedras se quebram e caem no chão.")
+
+        time.sleep(1)
+        print()
+        print("Você mergulha por uma passagem estreita entre duas colunas de pedra.")
+
+        time.sleep(1)
+        print()
+        print("O corpo enorme da criatura tenta seguir...")
+
+        time.sleep(1)
+        print()
+        print("Mas fica preso por um instante.")
+
+        time.sleep(1)
+        print()
+        print("Esse instante é o suficiente.")
+
+        time.sleep(1)
+        print()
+        print("Você continua correndo até o som do monstro desaparecer na escuridão.")
+
+        time.sleep(2)
+        print()
+        print("Você escapou da criatura e preservou sua vida.")
+
+        beast_defeated = 0
+    elif (resposta == '3'):
+        print("Com um grito, você avança contra a criatura.")
+
+        time.sleep(1)
+        print()
+        print("Sua espada corta o ar das catacumbas.")
+
+        time.sleep(1)
+        print()
+        print("Mas o Leão Sombrio é mais rápido do que você imaginava.")
+
+        time.sleep(1)
+        print()
+        print("A criatura desvia com um movimento brutal.")
+
+        time.sleep(1)
+        print()
+        print("Antes que você consiga recuar, uma garra enorme atinge seu ombro.")
+
+        vida, dano = random_damage(vida, armor)
+        print(f'Você recebeu {dano} de dano')
+        show_life(vida)
+
+        time.sleep(1)
+        print()
+        print("A força do golpe quase faz você cair.")
+
+        time.sleep(1)
+        print()
+        print("Agora, de perto...")
+
+        time.sleep(1)
+        print()
+        print("Você percebe o tamanho real da criatura.")
+
+        time.sleep(1)
+        print()
+        print("Músculos enormes.")
+        
+        time.sleep(1)
+        print()
+        print("Presas maiores que sua mão.")
+
+        time.sleep(1)
+        print()
+        print("E aqueles olhos vermelhos fixos em você.")
+
+        time.sleep(1)
+        print()
+        print("Você entende uma coisa imediatamente.")
+
+        time.sleep(1)
+        print()
+        print("Não dá para vencer isso aqui.")
+
+        time.sleep(1)
+        print()
+        print("A criatura ruge e avança novamente.")
+
+        time.sleep(1)
+        print()
+        print("Você se vira e começa a correr pelos túneis das catacumbas.")
+
+        time.sleep(1)
+        print()
+        print("Atrás de você, o som das patas pesadas ecoa pela pedra.")
+
+        time.sleep(1)
+        print()
+        print("Cada passo da criatura faz o chão tremer.")
+
+        time.sleep(1)
+        print()
+        print("Você vira um corredor estreito quase escorregando no chão úmido.")
+
+        time.sleep(1)
+        print()
+        print("O rugido da fera ecoa logo atrás.")
+
+        time.sleep(1)
+        print()
+        print("Mas então você encontra uma passagem estreita entre duas colunas quebradas.")
+
+        time.sleep(1)
+        print()
+        print("Você passa por ela correndo.")
+
+        time.sleep(1)
+        print()
+        print("O corpo gigantesco do Leão Sombrio tenta seguir...")
+
+        time.sleep(1)
+        print()
+        print("Mas não consegue passar.")
+
+        time.sleep(1)
+        print()
+        print("O rugido furioso da criatura ecoa pelas catacumbas enquanto você se afasta.")
+
+        time.sleep(2)
+        print()
+        print("Você conseguiu escapar.")
+
+        beast_defeated = 0
+    else:
+        logout()
+
+    return vida, beast_defeated

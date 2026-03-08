@@ -108,6 +108,10 @@ def rogue_path():
     vidaInicial = 50
     buffArmor = False
 
+    # Flags para registrar acontecimentos que mudam o rumo a longo prazo
+    poisoned = 0
+    beast_defeated = 0
+
     time.sleep(2)
     # Intro do Ladino
     print("Após uma longa procura pela exata localização dessas antigas ruínas.")
@@ -118,12 +122,12 @@ def rogue_path():
     print("Você deve seguir com muita cautela!")
 
     # First Step
-    vida = rogue_start(vidaInicial, buffArmor)
+    vida, poisoned = rogue_start(vidaInicial, buffArmor)
 
     # Second Step  
     vida, secondStepResposta = catacombs_entrance(vida, buffArmor)
 
      # Local de partida baseado na Segunda Escolha
     if(secondStepResposta == '1'):
-        vida = dark_corridor(vida, buffArmor)         # Caminho para Corredor Sombrio
+        vida, beast_defeated = dark_corridor(vida, buffArmor)         # Caminho para Corredor Sombrio
     
