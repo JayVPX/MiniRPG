@@ -130,4 +130,12 @@ def rogue_path():
      # Local de partida baseado na Segunda Escolha
     if(secondStepResposta == '1'):
         vida, beast_defeated = dark_corridor(vida, buffArmor)         # Caminho para Corredor Sombrio
+    elif(secondStepResposta == '2'):
+        vida = narrow_corridor(vida, buffArmor)                       # Caminha para Corredor Estreito
+    
+    #Fourth
+    vida = treasure_room(vida, buffArmor)
+
+    #End
+    rogue_end(vida, buffArmor, poisoned, beast_defeated)
     

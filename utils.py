@@ -9,7 +9,11 @@ def random_damage(vida: float, armor: bool):
     else:
         vida = vida - dano
 
-   
+    if (vida <= 0):
+        print()
+        print("Você morreu")
+        print("GAME OVER")
+        exit()
     return vida, dano
 
 def random_heal(vida: float):

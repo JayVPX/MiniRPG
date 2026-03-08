@@ -121,7 +121,115 @@ def catacombs_entrance(vida: float, armor: bool):
         print("Você decide seguir em frente sem acender nenhuma fonte de luz.")
         print("Você toma essa decisão, pois que teme que a luz atraia outras criaturas se esgueirando pela escuridão, e segue em frente se guiando principalmente pela audição e tato.")
     elif (resposta == '2'):
+        print("Você decide acender uma tocha.")
+
+        time.sleep(1)
         print()
+        print("Você pega um bastão de madeira entre seus pertences, junto de uma pederneira e um pedaço de aço.")
+
+        time.sleep(1)
+        print()
+        print("Com um movimento firme, você golpeia a pederneira contra o aço.")
+
+        time.sleep(1)
+        print()
+        print("Faíscas saltam no ar.")
+
+        time.sleep(1)
+        print()
+        print("Após algumas tentativas, uma delas encontra o pano enrolado na ponta do bastão.")
+
+        time.sleep(1)
+        print()
+        print("A chama nasce pequena...")
+
+        time.sleep(1)
+        print()
+        print("Mas logo se transforma em uma incandescência confortável.")
+
+        time.sleep(1)
+        print()
+        print("Você possui uma tocha agora.")
+
+        time.sleep(1)
+        print()
+        print("A luz tremulante ilumina melhor as paredes antigas da dungeon.")
+
+        time.sleep(1)
+        print()
+        print("Com ela, você consegue observar os caminhos ao redor com mais clareza.")
+
+        time.sleep(1)
+        print()
+        print("À sua frente existe um corredor largo, provavelmente o caminho principal.")
+
+        time.sleep(1)
+        print()
+        print("Mas algo imediatamente chama sua atenção.")
+
+        time.sleep(1)
+        print()
+        print("Sangue fresco escorre pelo chão de pedra.")
+
+        time.sleep(1)
+        print()
+        print("Um rastro vermelho desaparece na escuridão do corredor.")
+
+        time.sleep(1)
+        print()
+        print("E não muito longe dali...")
+
+        time.sleep(1)
+        print()
+        print("Um braço humano repousa no chão.")
+
+        time.sleep(1)
+        print()
+        print("Ainda usando parte de uma armadura.")
+
+        time.sleep(1)
+        print()
+        print("Você sabe exatamente o que isso significa.")
+
+        time.sleep(1)
+        print()
+        print("Algo horrendo vive naquele corredor.")
+
+        time.sleep(1)
+        print()
+        print("Algo grande o suficiente para fazer aquilo.")
+
+        time.sleep(1)
+        print()
+        print("A passagem parece quase convidar você a entrar...")
+
+        time.sleep(1)
+        print()
+        print("Como se estivesse chamando você para a morte.")
+
+        time.sleep(2)
+        print()
+        print("Definitivamente não é uma boa ideia.")
+
+        time.sleep(2)
+        print()
+        print("Você ergue a tocha e examina melhor os arredores.")
+
+        time.sleep(1)
+        print()
+        print("Entre algumas pedras antigas, você percebe uma passagem estreita.")
+
+        time.sleep(1)
+        print()
+        print("Discreta.")
+
+        time.sleep(1)
+        print()
+        print("Quase escondida.")
+
+        time.sleep(1)
+        print()
+        print("É para lá que você decide ir.")
     else:
         logout()
 
@@ -1385,3 +1493,1296 @@ def beast_battle(vida: float, armor: bool):
         logout()
 
     return vida, beast_defeated
+
+
+def narrow_corridor(vida: float, armor: bool):
+    time.sleep(2)
+    print()
+    print("Você avança pelo corredor estreito.")
+
+    time.sleep(1)
+    print()
+    print("A tocha projeta sombras estranhas pelas paredes irregulares.")
+
+    time.sleep(1)
+    print()
+    print("Então algo chama sua atenção.")
+
+    time.sleep(1)
+    print()
+    print("Um fio fino atravessa o chão do corredor.")
+
+    time.sleep(1)
+    print()
+    print("Quase invisível.")
+
+    time.sleep(2)
+    print()
+    print("O que você faz?")
+    print()
+    print("1- Tentar desarmar a armadilha")
+    print("2- Saltar por cima do fio\n")
+
+    show_life(vida)
+    resposta = input("> ")
+    time.sleep(1)
+
+    if (resposta == '1'):
+        print("Você se agacha lentamente.")
+
+        time.sleep(1)
+        print()
+        print("Com cuidado, começa a examinar o mecanismo.")
+
+        time.sleep(1)
+        print()
+        print("Mas no momento em que toca o fio...")
+
+        time.sleep(1)
+        print()
+        print("CLACK.")
+
+        time.sleep(1)
+        print()
+        print("Seu coração para por um segundo.")
+
+        time.sleep(1)
+        print()
+        print("BOOM.")
+        
+        vida, dano = random_damage(vida, armor)
+        print(f'Você recebeu {dano} de dano')
+        show_life(vida)
+        
+        print("Você é lançado por impacto muito forte, que gera certas queimaduras no seu corpo")
+    
+    elif (resposta == '2'):
+        print("Você decide não arriscar.")
+
+        time.sleep(1)
+        print()
+        print("Com um movimento rápido, você salta sobre o fio.")
+
+        time.sleep(1)
+        print()
+        print("Por um momento parece que funcionou.")
+
+        time.sleep(1)
+        print()
+        print("Mas algo atrás de você ativa o mecanismo.")
+
+        time.sleep(1)
+        print()
+        print("BOOOOM!")
+    else:
+        logout()
+    
+    time.sleep(1)
+    print()
+    print("Uma explosão sacode o corredor.")
+
+    time.sleep(1)
+    print()
+    print("Pedras caem do teto.")
+
+    time.sleep(1)
+    print()
+    print("A passagem por onde você veio desmorona completamente.")
+
+    time.sleep(2)
+    print()
+    print("Você olha para trás.")
+
+    time.sleep(1)
+    print()
+    print("A passagem por onde veio agora está completamente bloqueada por pedras.")
+
+    time.sleep(1)
+    print()
+    print("Não há mais volta.")
+
+    time.sleep(2)
+    print()
+    print("Com um suspiro pesado, você ergue a tocha e continua pelo corredor estreito.")
+
+    time.sleep(1)
+    print()
+    print("As paredes de pedra estão muito próximas.")
+
+    time.sleep(1)
+    print()
+    print("Em alguns pontos você precisa virar o corpo de lado para conseguir passar.")
+
+    time.sleep(1)
+    print()
+    print("A tocha quase raspa no teto baixo do túnel.")
+
+    time.sleep(1)
+    print()
+    print("O ar é abafado.")
+
+    time.sleep(1)
+    print()
+    print("Cheira a terra úmida... e algo pior.")
+
+    time.sleep(2)
+    print()
+    print("Suas botas raspam na pedra enquanto você avança lentamente.")
+
+    time.sleep(1)
+    print()
+    print("Cada passo ecoa pelo túnel apertado.")
+
+    time.sleep(1)
+    print()
+    print("Por um momento você se pergunta se aquele lugar foi escavado...")
+
+    time.sleep(1)
+    print()
+    print("Ou se algo cavou aquilo.")
+
+    time.sleep(2)
+    print()
+    print("Depois de alguns metros desconfortáveis...")
+
+    time.sleep(1)
+    print()
+    print("O corredor finalmente começa a se abrir.")
+
+    time.sleep(1)
+    print()
+    print("As paredes se afastam.")
+
+    time.sleep(1)
+    print()
+    print("O teto sobe um pouco mais.")
+
+    time.sleep(1)
+    print()
+    print("Você chega a uma pequena câmara subterrânea.")
+
+    time.sleep(2)
+    print()
+    print("E não está sozinho.")
+
+    time.sleep(1)
+    print()
+    print("Do outro lado da sala, duas pequenas criaturas de pele esverdeada estão sentadas próximas a uma pedra.")
+
+    time.sleep(1)
+    print()
+    print("Goblin.")
+
+    time.sleep(1)
+    print()
+    print("Dois deles.")
+
+    time.sleep(1)
+    print()
+    print("Eles parecem ocupados afiando facas enferrujadas contra uma pedra.")
+
+    time.sleep(1)
+    print()
+    print("O som metálico ecoa pela sala.")
+
+    time.sleep(2)
+    print()
+    print("SCRRRAAAP.")
+
+    time.sleep(2)
+    print()
+    print("Um deles levanta o olhar.")
+
+    time.sleep(1)
+    print()
+    print("Seus olhos pequenos refletem a luz da sua tocha.")
+
+    time.sleep(1)
+    print()
+    print("Ele mostra um sorriso cheio de dentes tortos.")
+
+    time.sleep(1)
+    print()
+    print("O segundo goblin também se levanta.")
+
+    time.sleep(2)
+    print()
+    print("Parece que você encontrou problemas novamente.")
+
+    vida = goblins_fight(vida, armor)
+
+    return vida
+
+def goblins_fight(vida: float, armor: bool):
+    print()
+    print("Os dois goblins mostram dentes tortos e avançam contra você.")
+
+    time.sleep(1)
+    print()
+    print("O que você faz?")
+    print()
+    print("1- Atirar com a besta")
+    print("2- Arremessar facas")
+    print("3- Avançar com a espada\n")
+
+    show_life(vida)
+    resposta = input("> ")
+    time.sleep(1)
+
+    if (resposta == '1'):
+
+        print("Você rapidamente puxa sua besta.")
+
+        time.sleep(1)
+        print()
+        print("Antes que os goblins cheguem perto, você dispara.")
+
+        time.sleep(1)
+        print()
+        print("A flecha atravessa o peito de um deles.")
+
+        time.sleep(1)
+        print()
+        print("O goblin cai morto no chão.")
+
+        time.sleep(1)
+        print()
+        print("O segundo solta um grito e corre até você.")
+
+        time.sleep(1)
+        print()
+        print("Ele corta seu braço com a faca.")
+
+        vida, dano = random_damage(vida, armor)
+        print(f'Você recebeu {dano} de dano')
+        show_life(vida)
+
+        time.sleep(1)
+        print()
+        print("Mas você reage rápido.")
+
+        time.sleep(1)
+        print()
+        print("Sua espada atravessa o pequeno corpo da criatura.")
+
+        time.sleep(1)
+        print()
+        print("O segundo goblin cai morto.")
+
+    elif (resposta == '2'):
+
+        print("Você puxa duas facas do cinto.")
+
+        time.sleep(1)
+        print()
+        print("Com um movimento rápido, você as arremessa.")
+
+        time.sleep(1)
+        print()
+        print("Uma das lâminas acerta o olho de um goblin.")
+        time.sleep(1)
+        print()
+        print("Ao sentir a dor repentina, ele reage motivado pela agonia e rancor, e lança sua faca em direção a você")
+
+        time.sleep(1)
+        print()
+        print("Mas, ele logo cai gritando no chão, com sua faca lançada sendo fincada na perna do aventureiro")
+
+        vida, dano = random_damage(vida, armor)
+        print(f'Você recebeu {dano} de dano')
+        show_life(vida)
+
+        time.sleep(1)
+        print()
+        print("O segundo chega perto e tenta atacar você.")
+
+        time.sleep(1)
+        print()
+        print("A lâmina dele raspa sua armadura.")
+
+        vida, dano = random_damage(vida, armor)
+        print(f'Você recebeu {dano} de dano')
+        show_life(vida)
+
+        time.sleep(1)
+        print()
+        print("Você agarra o goblin pelo pescoço.")
+
+        time.sleep(1)
+        print()
+        print("E crava sua espada em seu estômago.")
+
+        time.sleep(1)
+        print()
+        print("A criatura cai morta ao lado do companheiro.")
+
+    elif (resposta == '3'):
+
+        print("Você decide não dar espaço para eles.")
+
+        time.sleep(1)
+        print()
+        print("Avança com sua espada em mãos.")
+
+        time.sleep(1)
+        print()
+        print("O primeiro goblin tenta bloquear...")
+
+        time.sleep(1)
+        print()
+        print("Mas sua lâmina corta seu ombro profundamente.")
+
+        time.sleep(1)
+        print()
+        print("Ele cai no chão.")
+
+        time.sleep(1)
+        print()
+        print("O segundo aproveita a distração e tenta atacar por trás.")
+
+        time.sleep(1)
+        print()
+        print("A faca dele corta suas costas.")
+
+        vida, dano = random_damage(vida, armor)
+        print(f'Você recebeu {dano} de dano')
+        show_life(vida)
+
+        time.sleep(1)
+        print()
+        print("Você gira rapidamente.")
+
+        time.sleep(1)
+        print()
+        print("E corta o pescoço da criatura com um único golpe.")
+
+        time.sleep(1)
+        print()
+        print("Os dois goblins agora estão mortos.")
+    else:
+        logout()
+
+    time.sleep(2)
+    print()
+    print("A pequena câmara volta a ficar em silêncio.")
+    time.sleep(2)
+    print()
+    print("O silêncio retorna à pequena câmara.")
+
+    time.sleep(1)
+    print()
+    print("Os corpos dos goblins permanecem imóveis no chão de pedra.")
+
+    time.sleep(1)
+    print()
+    print("Você respira fundo enquanto limpa a lâmina da espada.")
+
+    time.sleep(2)
+    print()
+    print("Erguendo a tocha novamente, você observa melhor o lugar.")
+
+    time.sleep(1)
+    print()
+    print("As paredes não são apenas pedra bruta.")
+
+    time.sleep(1)
+    print()
+    print("Elas possuem marcas antigas.")
+
+    time.sleep(1)
+    print()
+    print("Símbolos esculpidos na rocha.")
+
+    time.sleep(1)
+    print()
+    print("Uma linguagem que você não reconhece.")
+
+    time.sleep(2)
+    print()
+    print("Talvez estas ruínas tenham pertencido a uma civilização muito mais antiga do que se imaginava.")
+
+    time.sleep(2)
+    print()
+    print("Entre as paredes desgastadas pelo tempo, você percebe restos de colunas quebradas.")
+
+    time.sleep(1)
+    print()
+    print("E pedaços de esculturas quase irreconhecíveis.")
+
+    time.sleep(1)
+    print()
+    print("Este lugar definitivamente já foi algo muito maior.")
+
+    time.sleep(2)
+    print()
+    print("Mas agora restou apenas decadência.")
+
+    time.sleep(2)
+    print()
+    print("Você examina os arredores procurando outro caminho.")
+
+    time.sleep(1)
+    print()
+    print("Há apenas uma passagem possível.")
+
+    time.sleep(1)
+    print()
+    print("Um corredor antigo que continua mais fundo nas ruínas.")
+
+    time.sleep(2)
+    print()
+    print("Sem outra opção, você segue por ele.")
+
+    time.sleep(1)
+    print()
+    print("Seus passos ecoam pelas pedras antigas.")
+
+    time.sleep(1)
+    print()
+    print("A tocha projeta sombras dançantes nas paredes cobertas de símbolos.")
+
+    time.sleep(1)
+    print()
+    print("Em alguns trechos, partes do teto já desabaram.")
+
+    time.sleep(1)
+    print()
+    print("Raízes grossas de árvores atravessam as pedras.")
+
+    time.sleep(2)
+    print()
+    print("O tempo claramente venceu este lugar.")
+
+    time.sleep(2)
+    print()
+    print("Após alguns minutos caminhando...")
+
+    time.sleep(1)
+    print()
+    print("Você percebe algo diferente.")
+
+    time.sleep(1)
+    print()
+    print("Uma luz fraca surge mais à frente no corredor.")
+
+    time.sleep(1)
+    print()
+    print("Mas não é a luz da sua tocha.")
+
+    time.sleep(2)
+    print()
+    print("É mais forte.")
+
+    time.sleep(1)
+    print()
+    print("Mais constante.")
+
+    time.sleep(2)
+    print()
+    print("Você avança com cuidado.")
+
+    time.sleep(1)
+    print()
+    print("O corredor finalmente termina.")
+
+    time.sleep(1)
+    print()
+    print("E se abre para uma sala muito maior.")
+
+    time.sleep(2)
+    print()
+    print("O lugar está iluminado.")
+
+    return vida
+
+def treasure_room(vida: float, armor: bool):
+
+    time.sleep(2)
+    print()
+    print("Você avança lentamente para dentro da sala.")
+
+    time.sleep(1)
+    print()
+    print("O lugar é surpreendentemente bem iluminado.")
+
+    time.sleep(1)
+    print()
+    print("Tochas antigas queimam presas às paredes de pedra.")
+
+    time.sleep(1)
+    print()
+    print("A chama é estável.")
+
+    time.sleep(1)
+    print()
+    print("Como se alguém mantivesse aquele lugar vivo... mesmo após tantos anos.")
+
+    time.sleep(2)
+    print()
+    print("A sala é grande.")
+
+    time.sleep(1)
+    print()
+    print("Muito maior do que qualquer outro espaço que você encontrou nessas ruínas.")
+
+    time.sleep(1)
+    print()
+    print("As paredes são cobertas por inscrições antigas.")
+
+    time.sleep(1)
+    print()
+    print("Linhas e mais linhas de símbolos esculpidos na pedra.")
+
+    time.sleep(1)
+    print()
+    print("Histórias de um povo esquecido.")
+
+    time.sleep(1)
+    print()
+    print("Uma civilização que provavelmente dominava este lugar muito antes de você nascer.")
+
+    time.sleep(2)
+    print()
+    print("Alguns desenhos mostram guerreiros.")
+
+    time.sleep(1)
+    print()
+    print("Outros mostram criaturas estranhas.")
+
+    time.sleep(1)
+    print()
+    print("Rituais.")
+
+    time.sleep(1)
+    print()
+    print("Sacrifícios.")
+
+    time.sleep(2)
+    print()
+    print("O chão é feito de grandes placas de pedra perfeitamente encaixadas.")
+
+    time.sleep(1)
+    print()
+    print("Muito mais refinado do que os corredores destruídos que você atravessou.")
+
+    time.sleep(2)
+    print()
+    print("No centro da sala...")
+
+    time.sleep(1)
+    print()
+    print("Existem dois pedestais de pedra.")
+
+    time.sleep(1)
+    print()
+    print("Trabalhados com detalhes finos e antigos.")
+
+    time.sleep(2)
+    print()
+    print("Sobre cada pedestal repousa um baú.")
+
+    time.sleep(1)
+    print()
+    print("Dois baús.")
+
+    time.sleep(1)
+    print()
+    print("Antigos.")
+
+    time.sleep(1)
+    print()
+    print("Pesados.")
+
+    time.sleep(2)
+    print()
+    print("Ambos parecem ter sido colocados ali com algum propósito.")
+
+    time.sleep(1)
+    print()
+    print("Talvez uma escolha.")
+
+    time.sleep(1)
+    print()
+    print("Talvez um teste.")
+
+    time.sleep(2)
+    print()
+    print("A chama das tochas dança pelas superfícies metálicas dos baús.")
+
+    time.sleep(1)
+    print()
+    print("Você sente que algo importante está guardado ali.")
+
+    time.sleep(2)
+    print()
+    print("O que você faz?")
+    print()
+    print("1- Abrir o baú da esquerda")
+    print("2- Abrir o baú da direita\n")
+
+    show_life(vida)
+    resposta = input("> ")
+    time.sleep(1)
+
+    if (resposta == '1'):
+
+        print()
+        print("Você se aproxima do baú da esquerda.")
+
+        time.sleep(1)
+        print()
+        print("A madeira é antiga, mas ainda sólida.")
+
+        time.sleep(1)
+        print()
+        print("Você levanta a tampa com cuidado.")
+
+        time.sleep(2)
+        print()
+        print("O interior brilha imediatamente com a luz da tocha.")
+
+        time.sleep(1)
+        print()
+        print("Ouro.")
+
+        time.sleep(1)
+        print()
+        print("Moedas antigas.")
+
+        time.sleep(1)
+        print()
+        print("Joias incrustadas em anéis e colares.")
+
+        time.sleep(1)
+        print()
+        print("Tesouros esquecidos por séculos.")
+
+        time.sleep(2)
+        print()
+        print("Então você escuta algo.")
+
+        time.sleep(1)
+        print()
+        print("CRRRAAAK.")
+
+        time.sleep(1)
+        print()
+        print("Um som de madeira se movendo.")
+
+        time.sleep(1)
+        print()
+        print("Atrás de você.")
+
+        time.sleep(2)
+        print()
+        print("O baú da direita começa a tremer.")
+
+        time.sleep(1)
+        print()
+        print("A tampa se abre lentamente...")
+
+        time.sleep(1)
+        print()
+        print("Mas não há tesouro dentro.")
+
+        time.sleep(1)
+        print()
+        print("Apenas fileiras de dentes afiados.")
+
+        time.sleep(2)
+        print()
+        print("O baú se ergue sobre pernas grotescas.")
+
+        time.sleep(1)
+        print()
+        print("Um Mimic.")
+
+        time.sleep(2)
+        print()
+        print("A criatura ruge e avança contra você.")
+
+        vida = mimic_battle(vida, armor)
+
+    elif (resposta == '2'):
+
+        print()
+        print("Você se aproxima do baú da direita.")
+
+        time.sleep(1)
+        print()
+        print("Algo nele parece... estranho.")
+
+        time.sleep(1)
+        print()
+        print("Mas você ignora a sensação.")
+
+        time.sleep(1)
+        print()
+        print("E abre a tampa.")
+
+        time.sleep(1)
+        print()
+        print("Instantaneamente algo salta para fora.")
+
+        time.sleep(1)
+        print()
+        print("DENTES.")
+
+        time.sleep(1)
+        print()
+        print("Uma língua grotesca dispara contra você.")
+
+        time.sleep(1)
+        print()
+        print("O baú morde seu braço violentamente.")
+
+        vida, dano = random_damage(vida, armor)
+        print(f"Você recebeu {dano} de dano")
+        show_life(vida)
+
+        time.sleep(2)
+        print()
+        print("O baú inteiro se transforma.")
+
+        time.sleep(1)
+        print()
+        print("Pernas ossudas se estendem sob a madeira.")
+
+        time.sleep(1)
+        print()
+        print("A criatura se levanta diante de você.")
+
+        time.sleep(1)
+        print()
+        print("Um Mimic.")
+
+        time.sleep(2)
+        print()
+        print("Ele abre sua boca monstruosa novamente.")
+
+        time.sleep(1)
+        print()
+        print("A luta começa.")
+
+        vida = mimic_battle(vida, armor)
+    else:
+        logout()
+
+    return vida
+
+def mimic_battle(vida: float, armor: bool):
+
+    print()
+    print("O baú grotesco se ergue sobre pernas ossudas.")
+
+    time.sleep(1)
+    print()
+    print("Sua tampa abre revelando fileiras de dentes afiados.")
+
+    time.sleep(1)
+    print()
+    print("Uma língua longa e viscosa se arrasta pelo chão de pedra.")
+
+    time.sleep(1)
+    print()
+    print("O Mimic salta em sua direção.")
+
+    time.sleep(2)
+
+    print()
+    print("O que você faz?")
+    print()
+    print("1- Atacar com a espada")
+    print("2- Arremessar facas")
+    print("3- Disparar a besta")
+    print("4- Usar a tocha\n")
+
+    show_life(vida)
+    resposta = input("> ")
+    time.sleep(1)
+
+    if (resposta == '1'):
+
+        print("Você avança contra a criatura com sua espada.")
+
+        time.sleep(1)
+        print()
+        print("A lâmina corta a madeira viva do Mimic.")
+
+        time.sleep(1)
+        print()
+        print("Uma gosma escura escorre da ferida.")
+
+        time.sleep(1)
+        print()
+        print("A criatura reage imediatamente.")
+
+        time.sleep(1)
+        print()
+        print("A língua do Mimic dispara contra você.")
+
+        vida, dano = random_damage(vida, armor)
+        print(f"Você recebeu {dano} de dano")
+        show_life(vida)
+
+        time.sleep(2)
+
+        print()
+        print("A criatura abre sua boca monstruosa.")
+
+        print()
+        print("1- Enfiar a espada dentro da boca")
+        print("2- Recuar rapidamente\n")
+
+        resposta = input("> ")
+        time.sleep(1)
+
+        if (resposta == '1'):
+
+            print("Você empurra a espada diretamente dentro da boca do Mimic.")
+
+            time.sleep(1)
+            print()
+            print("A lâmina atravessa o interior da criatura.")
+
+            time.sleep(1)
+            print()
+            print("O Mimic se contorce violentamente.")
+
+            time.sleep(1)
+            print()
+            print("Então colapsa no chão.")
+
+            print()
+            print("O Mimic está morto.")
+
+        elif (resposta == '2'):
+
+            print("Você tenta recuar.")
+
+            time.sleep(1)
+            print()
+            print("Mas a língua viscosa do Mimic envolve seu corpo.")
+
+            time.sleep(1)
+            print()
+            print("Ela puxa você diretamente para dentro da boca da criatura.")
+
+            time.sleep(1)
+            print()
+            print("Dentes gigantes se fecham ao seu redor.")
+
+            time.sleep(1)
+            print()
+            print("Você completamente imobilizado pelas línguas da criatura, é cruelmente mastigado")
+
+            time.sleep(1)
+            print()
+            print("Você grita intermitentemente, enquanto a criatura continua impiedosamente")
+
+            time.sleep(3)
+            print()
+            print("Finalmente suas forças para gritar cessam")
+            print("Você morreu.")
+            print("GAME OVER")
+            print()
+            exit()
+
+    elif (resposta == '2'):
+
+        print("Você puxa duas facas rapidamente.")
+
+        time.sleep(1)
+        print()
+        print("E as arremessa contra o Mimic.")
+
+        time.sleep(1)
+        print()
+        print("Uma delas acerta um dos olhos da criatura.")
+
+        time.sleep(1)
+        print()
+        print("O Mimic grita com um som grotesco.")
+
+        time.sleep(1)
+
+        print()
+        print("Mas ele salta contra você, colidindo fortemente sua cabeça de contra seu torso.")
+
+        vida, dano = random_damage(vida, armor)
+        print(f"Você recebeu {dano} de dano")
+        show_life(vida)
+
+        time.sleep(2)
+
+        print()
+        print("O Mimic está momentaneamente desorientado.")
+
+        print()
+        print("1- Subir sobre o Mimic e cravar a espada")
+        print("2- Sacar a besta e atirar à queima-roupa\n")
+
+        resposta = input("> ")
+        time.sleep(1)
+
+        if (resposta == '1'):
+
+            print("Você salta sobre a criatura.")
+
+            time.sleep(1)
+            print()
+            print("Sua espada atravessa a madeira viva.")
+
+            time.sleep(1)
+            print()
+            print("O Mimic se debate violentamente.")
+
+            time.sleep(1)
+            print()
+            print("Mas logo para de se mover.")
+
+            print()
+            print("O Mimic está morto.")
+
+        elif (resposta == '2'):
+
+            print("Você aponta a besta diretamente para a boca da criatura.")
+
+            time.sleep(1)
+            print()
+            print("E dispara.")
+
+            time.sleep(1)
+            print()
+            print("A flecha atravessa o interior do Mimic.")
+
+            time.sleep(1)
+            print()
+            print("A criatura colapsa no chão.")
+
+            print()
+            print("O Mimic está morto.")
+
+
+    elif (resposta == '3'):
+
+        print("Você puxa sua besta.")
+
+        time.sleep(1)
+        print()
+        print("Mas o Mimic é rápido.")
+
+        time.sleep(1)
+        print()
+        print("A língua da criatura chicoteia no ar.")
+
+        vida, dano = random_damage(vida, armor)
+        print(f"Você recebeu {dano} de dano")
+        show_life(vida)
+
+        time.sleep(2)
+
+        print()
+        print("Mesmo ferido, você dispara.")
+
+        time.sleep(1)
+        print()
+        print("A flecha atravessa o topo do Mimic.")
+
+        time.sleep(1)
+        print()
+        print("A criatura grita e cai de lado.")
+
+        print()
+        print("O Mimic está morto.")
+
+
+    elif (resposta == '4'):
+
+        print("Você ergue uma tocha incandecente contra a criatura.")
+
+        time.sleep(1)
+        print()
+        print("As chamas tocam a madeira viva do Mimic.")
+
+        time.sleep(1)
+        print()
+        print("A criatura solta um guincho horrível.")
+
+        time.sleep(1)
+        print()
+        print("Fogo se espalha rapidamente por seu corpo.")
+
+        time.sleep(1)
+        print()
+        print("O Mimic se debate violentamente.")
+
+        time.sleep(1)
+        print()
+        print("Mas não consegue apagar as chamas.")
+
+        time.sleep(2)
+        print()
+        print("Depois de alguns segundos...")
+
+        time.sleep(1)
+        print()
+        print("A criatura para de se mover.")
+
+        print()
+        print("O Mimic está morto.")
+    else:
+        logout()
+
+    return vida
+
+def rogue_end(vida: float, armor: bool, poisoned: int, beast_defeated : int):
+    time.sleep(1)
+    print("Você caminha até o baú remanescente naquela sala perfeitamente preservada e requintada, adornada com detalhes e entalhes característicos da antiga civilização que um dia dominou aquele lugar.")
+    time.sleep(1)
+    print("Por um momento, você apenas observa.")
+    time.sleep(1)
+    print("As paredes esculpidas.")
+    time.sleep(1)
+    print("Os símbolos antigos.")
+    time.sleep(1)
+    print("A grandiosidade silenciosa daquele salão.")
+    time.sleep(1)
+    print("Algo dentro de você quase acredita que a própria sala está sussurrando:")
+    time.sleep(1)
+    print("\"Venha.\"")
+    time.sleep(1)
+    print("\"Você merece.\"")
+    time.sleep(1)
+    print("\"Reivindique-o.\"")
+    time.sleep(1)
+    print("\"Ele é seu.\"")
+    time.sleep(1)
+    print("Você abre o baú.")
+    time.sleep(1)
+    print("Dentro dele está aquilo pelo qual você lutou.")
+    time.sleep(1)
+    print("Aquilo pelo qual sangrou.")
+    time.sleep(1)
+    print("Aquilo que o trouxe até aqui.")
+    time.sleep(1)
+    print("Uma riqueza grandiosa e aparentemente interminável.")
+    time.sleep(1)
+    print("Moedas de ouro.")
+    time.sleep(1)
+    print("Joias antigas.")
+    time.sleep(1)
+    print("Artefatos esquecidos pelo tempo.")
+    time.sleep(1)
+    print("O brilho intenso do ouro quase fere seus olhos.")
+    time.sleep(1)
+    print("Então você chora.")
+    time.sleep(1)
+    print("Chora lembrando de todas as dificuldades da sua vida.")
+    time.sleep(1)
+    print("Chora lembrando das noites frias.")
+    time.sleep(1)
+    print("Das barrigas vazias.")
+    time.sleep(1)
+    print("Das portas fechadas.")
+    time.sleep(1)
+    print("Você sente que, finalmente, não haverá mais espaço para dias ruins em sua vida.")
+    time.sleep(1)
+    print("Tudo que você sempre quis...")
+    time.sleep(1)
+    print("Está agora dentro daquele baú.")
+    time.sleep(1)
+    print("Definitivamente não foi fácil.")
+    time.sleep(1)
+    print("Mas você conseguiu.")
+
+    if (poisoned == 1):
+        time.sleep(1)
+        print("De repente...")
+        time.sleep(1)
+        print("Você sente um formigamento no lado direito do pescoço.")
+        time.sleep(1)
+        print("Sua mão sobe lentamente até o local.")
+        time.sleep(1)
+        print("Seus dedos encontram a pequena ferida deixada pela estranha aranha que o picou no início da dungeon.")
+        time.sleep(1)
+        print("Seu corpo começa a esquentar.")
+        time.sleep(1)
+        print("A dor que começou no ponto da picada agora se espalha pelo seu corpo.")
+        time.sleep(1)
+        print("Dói.")
+        time.sleep(1)
+        print("Muito.")
+        time.sleep(1)
+        print("Mas não é só dor.")
+        time.sleep(1)
+        print("Você sente enjoo.")
+        time.sleep(1)
+        print("Você sente náusea.")
+        time.sleep(1)
+        print("Sua visão começa a girar.")
+        time.sleep(1)
+        print("Você sente suas forças desaparecendo.")
+        time.sleep(1)
+        print("Com dificuldade, você se ajoelha diante do baú.")
+        time.sleep(1)
+        print("Você usa suas últimas forças para abraçá-lo.")
+        time.sleep(1)
+        print("Abraçar tudo aquilo que você sempre quis.")
+        time.sleep(1)
+        print("Você chora novamente.")
+        time.sleep(1)
+        print("Chora até não conseguir mais respirar.")
+        time.sleep(1)
+        print("E então...")
+        time.sleep(1)
+        print("O silêncio toma conta da sala.")
+        print("GAME OVER")
+        print()
+        exit()
+
+    time.sleep(1)
+    print("Você precisa sair daquele lugar.")
+    time.sleep(1)
+    print("Você fecha o baú com cuidado.")
+    time.sleep(1)
+    print("Depois de algum esforço, amarra ele em suas costas.")
+    time.sleep(1)
+    print("O peso é enorme.")
+    time.sleep(1)
+    print("Pesado demais.")
+    time.sleep(1)
+    print("Cada passo exige força.")
+    time.sleep(1)
+    print("Mas você segue mesmo assim.")
+    time.sleep(1)
+    print("Você percebe que agora está completamente vulnerável.")
+    time.sleep(1)
+    print("Se alguma criatura ainda habitar essas ruínas...")
+    time.sleep(1)
+    print("Você dificilmente conseguiria lutar.")
+    time.sleep(1)
+    print("Por isso, você apaga a chama da tocha.")
+    time.sleep(1)
+    print("Você sai da sala iluminada.")
+    time.sleep(1)
+    print("E novamente se vê mergulhado na escuridão das ruínas antigas.")
+    time.sleep(1)
+    print("Silêncio.")
+    time.sleep(1)
+    print("Pedras.")
+    time.sleep(1)
+    print("Sombras.")
+    time.sleep(1)
+    print("Você segue em busca da saída.")
+    
+    if (beast_defeated == 0):
+        time.sleep(1)
+        print("Você caminha lentamente pelo corredor extenso.")
+        time.sleep(1)
+        print("Cada passo é pesado.")
+        time.sleep(1)
+        print("O baú cheio de riquezas pressiona suas costas.")
+        time.sleep(1)
+        print("O silêncio das catacumbas parece absoluto.")
+        time.sleep(1)
+        print("Mas então...")
+        time.sleep(1)
+        print("Você escuta algo.")
+        time.sleep(1)
+        print("Um som.")
+        time.sleep(1)
+        print("Um arranhar profundo contra a pedra.")
+        time.sleep(1)
+        print("Você congela.")
+        time.sleep(1)
+        print("No escuro atrás de você...")
+        time.sleep(1)
+        print("Dois olhos vermelhos se abrem.")
+        time.sleep(1)
+        print("Antes que você possa reagir, a criatura avança.")
+        time.sleep(1)
+        print("Um rugido monstruoso ecoa pelas catacumbas.")
+        time.sleep(1)
+        print("Você tenta correr.")
+        time.sleep(1)
+        print("Mas com o peso do tesouro nas costas...")
+        time.sleep(1)
+        print("É tarde demais.")
+        time.sleep(1)
+        print("As garras da criatura atravessam sua armadura.")
+        time.sleep(1)
+        print("Você cai no chão de pedra.")
+        time.sleep(1)
+        print("O baú se abre ao impacto.")
+        time.sleep(1)
+        print("Moedas de ouro se espalham pelo chão.")
+        time.sleep(1)
+        print("Brilhando na escuridão.")
+        time.sleep(1)
+        print("O último som que você ouve...")
+        time.sleep(1)
+        print("É o mastigar da criatura.")
+        time.sleep(1)
+        print("As Catacumbas de Eldritch permanecem invictas.")
+        time.sleep(1)
+        print("E mais um aventureiro...")
+        time.sleep(1)
+        print("Nunca voltou para casa.")
+        print("GAME OVER")
+        print()
+        exit()
+
+    time.sleep(1)
+    print("Você caminha lentamente por aquele longo corredor.")
+    time.sleep(1)
+    print("O mesmo corredor onde travou uma luta brutal contra o Leão Sombrio de Eldritch.")
+    time.sleep(1)
+    print("A batalha quase tirou sua vida.")
+    time.sleep(1)
+    print("Mas você venceu.")
+    time.sleep(1)
+    print("Após muitos passos cansados, você passa pelo corpo colossal da criatura.")
+    time.sleep(1)
+    print("Imóvel")
+    time.sleep(1)
+    print("Derrotada.")
+    time.sleep(1)
+    print("Orgulhoso.")
+    time.sleep(1)
+    print("Ferido.")
+    time.sleep(1)
+    print("Mas vivo.")
+    time.sleep(1)
+    print("Depois de mais um longo trecho de caminhada...")
+    time.sleep(1)
+    print("Você finalmente vê algo.")
+    time.sleep(1)
+    print("Luz.")
+    time.sleep(1)
+    print("A luz da entrada da dungeon.")
+    time.sleep(1)
+    print("Seu coração dispara.")
+    time.sleep(1)
+    print("Você acelera o passo mesmo com o peso do baú esmagando suas costas.")
+    time.sleep(1)
+    print("E então...")
+    time.sleep(1)
+    print("Você finalmente sai das ruínas.")
+    time.sleep(1)
+    print("O ar fresco da superfície invade seus pulmões.")
+    time.sleep(1)
+    print("Você conquistou as Catacumbas de Eldritch.")
+    time.sleep(1)
+    print("Você é o primeiro aventureiro a entrar naquele lugar...")
+    time.sleep(1)
+    print("E sair vivo com suas riquezas.")
+    time.sleep(1)
+    print("YOU WIN")
+    print()
+    exit()
+    
+
+
+
+
