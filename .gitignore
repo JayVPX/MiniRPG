@@ -1,0 +1,34 @@
+# Python
+# Byte-code files
+*.pyc
+__pycache__/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+*.whl
+
+# Virtual environment
+# venv/ is a common name, you may use others like .venv/
+venv/
+.venv/
+env/
+.env/
+
+# Editors and IDEs
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Operating System files
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Miscellaneous
+*.log
+pip-wheel-metadata/

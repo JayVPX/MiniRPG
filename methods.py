@@ -1,4 +1,5 @@
 from paths.magePath import *
+from paths.roguePath import *
 from methods import *
 from utils import *
 import time
@@ -48,7 +49,8 @@ def select_class():
     elif classe == "2":
         print("=== Você escolheu: LADINO ===")
         print()
-        print("Você é um aventureiro que vive completando missões para ganhar dinheiro.")
+        print("Você é um aventureiro de Rank médio em busca de garantir sua subsistência e uma vida com alguns luxos.")
+        print("Vive resgatando tesouros e riquezas encontradas em suas empreitadas nas diversas estruturas antigas, perigosas e aparentemente abandonadas pelo mundo de Valtherra.")
         print("Em uma taverna, você ouve um grupo de aventureiros conversando sobre certos rumores acerca de uma dungeon")
         print("Mais especificamente, a dungeon são as Catacumbas de Eldritch, uma antiga civilização que há muito já se ruiu.")
         print("Dizem que no fundo da dungeon existe um baú cheio de tesouros valioso, que quem o encontrar viverá o resto da vida sem se preocupar com gastos.")
@@ -103,4 +105,25 @@ def mage_path():
 
 
 def rogue_path():
-    print("ROUBEI E VAZEI")
+    vidaInicial = 50
+    buffArmor = False
+
+    time.sleep(2)
+    # Intro do Ladino
+    print("Após uma longa procura pela exata localização dessas antigas ruínas.")
+    print("Recolhendo informações de outros aventureiros, seguindo rumores de mal-informados e ouvindo histórias das várias tragédias que ocorreram nessa estrutura curiosa, mas traiçoeira.")
+    print("Você finalmente se encontra diante delas.")
+    print("Agora, você está diante das Catacumbas de Eldritch.")
+    print("Um lugar que, de acordo com rumores, promete muita prosperidade, mas acompanhada de perigos à altura, sendo local onde muitos aventureiros adentraram, mas nunca saíram.")
+    print("Você deve seguir com muita cautela!")
+
+    # First Step
+    vida = rogue_start(vidaInicial, buffArmor)
+
+    # Second Step  
+    vida, secondStepResposta = catacombs_entrance(vida, buffArmor)
+
+     # Local de partida baseado na Segunda Escolha
+    if(secondStepResposta == '1'):
+        vida = dark_corridor(vida, buffArmor)         # Caminho para Corredor Sombrio
+    
