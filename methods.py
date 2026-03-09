@@ -107,7 +107,7 @@ def mage_path():
     mage_end()                              #END
 
 def rogue_path():
-    vidaInicial = 50
+    vidaInicial = 30
     buffArmor = False
 
     # Flags para registrar acontecimentos que mudam o rumo a longo prazo
