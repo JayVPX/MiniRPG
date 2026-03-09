@@ -820,6 +820,7 @@ def mage_miniBoss(vida: float, armor: bool):
             print("Runas arcanas começam a girar ao seu redor, o ar se distorce e um feixe multicolorido surge em suas mãos.")
             print("A energia cresce em intensidade, cada cor da lança pulsa como se fosse um fragmento de estrela.")
             print("Com um gesto firme, você dispara a Lança Prismática contra o peito do Golem!\n")
+            time.sleep(2)
 
             print("A lança de energia atravessa a camada de rocha, perfura o núcleo e o colosso solta um rugido metálico antes de desmoronar.")
             print("Mas o poder é grande demais... a magia retorna em um choque violento.")

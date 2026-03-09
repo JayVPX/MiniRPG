@@ -18,12 +18,13 @@ def random_damage(vida: float, armor: bool):
         print()
         input("Pressione ENTER para sair...")
 
+        exit()
 
     return vida, dano
 
 def random_heal(vida: float):
-    heal = random.randint(2,10)
-    vida = vida + heal
+    heal = random.randint(2, 10)
+    vida = min(vida + heal, 30)
     return vida, heal
 
 def show_life(vida):
