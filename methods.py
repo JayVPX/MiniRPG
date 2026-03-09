@@ -103,8 +103,13 @@ def mage_path():
     elif(secondStepResposta =="3"):
         vida, buffArmor = mage_laboratory(vida, buffArmor)      #Caminho para laboratório secreto
      
-    mage_boss_fight(vida, buffArmor) #BOSS FIGHT
-    
+
+    mage_pre_boss_intro(vida, buffArmor)    #INTRO PRE BOSS FIGHT
+
+    mage_boss_fight(vida, buffArmor)        #BOSS FIGHT
+
+    mage_end()                              #END
+
     
 
 def rogue_path():

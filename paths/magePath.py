@@ -1037,19 +1037,20 @@ def mage_staircase(vida: float, armor: bool):
         print()
         print("Talvez destruir a armadura não seja a única solução.")
         print("Você fecha os olhos e começa a canalizar uma magia diferente.")
-        print("Purificarz\n")
-
+        print("Purificar\n")
+        time.sleep(2)
         
         print("Runas luminosas começam a surgir ao seu redor.")
         print("Uma luz suave envolve a escadaria enquanto você estende sua mão em direção à armadura.")
         print("A criatura para de se mover.\n")
+        time.sleep(2)
 
 
         print("Você força mais energia para dentro do feitiço.")
         print("A luz invade a armadura, penetrando as runas da maldição.")
-        print("A criatura começa a tremer violentamente.")
+        print("A criatura começa a tremer violentamente.\n")
 
-        print("Uma onda de energia sombria explode da armadura e invade sua mente.")
+        print("Uma onda de energia sombria explode da armadura e invade sua mente.\n")
 
         vida, dano = random_damage(vida, armor)
 
@@ -1058,6 +1059,7 @@ def mage_staircase(vida: float, armor: bool):
 
         print()
         print("Memórias fragmentadas atravessam sua consciência.\n")
+        time.sleep(2)
 
         print("Um antigo cavaleiro.")
         print("Um juramento.")
@@ -1065,9 +1067,9 @@ def mage_staircase(vida: float, armor: bool):
         time.sleep(2)
       
         print("Com um último esforço, você completa o ritual.")
-        print("A luz purificadora envolve completamente a armadura.")
+        print("A luz purificadora envolve completamente a armadura.\n")
+        time.sleep(2)
 
-        print()
         print("O metal cai lentamente no chão.")
         print("A alma presa finalmente foi libertada.")
         print("A escadaria volta ao silêncio, agora, sem nenhuma ameaça a frente.")
@@ -1079,8 +1081,7 @@ def mage_staircase(vida: float, armor: bool):
     return vida
 
 # SALA BOSS
-def mage_boss_fight(vida: float, armor: bool):
-
+def mage_pre_boss_intro(vida: float, armor: bool):
     ## INTRO DA SALA ANTES DO BOSS
 
     time.sleep(2)
@@ -1122,15 +1123,723 @@ def mage_boss_fight(vida: float, armor: bool):
 
     print("Seja o que for que habite além daquela porta...")
     print("Este é o último obstáculo da Torre da Lua Quebrada.\n")
-    time.sleep(2)
+    time.sleep(4)
 
-    # Entrando na sala do boss
+    # INTRO DA SALA DO BOSS
 
     print()
     print("Mesmo receoso, você abre aquela enorme porta de pedra...")
     print("O som é incessante e o peso era incômodo, mas ainda assim você consegue abrir.")
     print("Sabendo que agora não tem como voltar, você passa por ela.\n")
+    time.sleep(2)
 
     print("\n=== APOSENTOS DO ARQUIMAGO ===\n")
 
+    print("O aposento parece antigo, mas diferente do restante da torre.")
+    print("Mesas de estudo estão espalhadas pela sala, cobertas de pergaminhos deteriorados.")
+    print("Estantes gigantes alcançam quase o teto, repletas de livros envelhecidos pelo tempo.\n")
+    
+    print("No centro da sala há um pedestal de pedra.")
+    print("Sobre ele repousa um único objeto.\n")
+    time.sleep(2)
+
+    
+    print("Um grimório.\n")
+
+    print("Sua capa é feita de um couro escuro e danificado, resultado da ação do tempo.")
+    print("Runas estranhas estão gravadas na superfície, pulsando lentamente com uma luz púrpura.\n")
+
+    print("Mesmo à distância você sente algo errado.")
+    print("Aquele livro... está vivo.\n")
+    time.sleep(2)
+
+    print("Quando você se aproxima alguns passos, o grimório se abre sozinho.")
+    print("As páginas começam a virar violentamente, como se fossem sopradas por um vento invisível.\n")
+
+    print("Sussurros sobrepostos começam a ecoar pela sala.")
+    print("Dezenas... talvez centenas.\n")
+    time.sleep(2)
+
+
+    print("De repente, uma onda de energia explode do livro.")
+    print("As páginas se rasgam e começam a flutuar pelo ar.")
+    print("Runas corrompidas giram pela sala como um redemoinho de magia negra.\n")
+
+    print("As páginas começam a se juntar.")
+    print("Primeiro formando uma massa disforme de energia arcana.")
+    print("Depois... um corpo.")
+    print("Composto de páginas amaldiçoadas e runas sombrias, um rosto indefinido onde várias vozes falam ao mesmo tempo.\n")
+    time.sleep(2)
+
+    print("O Arcano Profanado nasceu.\n")
+    
+    print("Mesmo sem rosto, você sabe que a criatura te encara.")
+    print("Todas as vozes ecoam juntas dentro da sua mente:\n")
+
+    print("'Mais um mago veio buscar o nosso poder...'")
+    print("'Mais um mago... para se tornar parte de nós.'")
+
+    print("A batalha final da Torre da Lua Quebrada começa agora.")
+
+# BOSS FIGHT
+def mage_boss_fight(vida: float, armor: bool):
+    time.sleep(2)
+    
+    print()
+    print("O Arcano profanado ainda está instável, por ter sido recém formado pelo grimório.")
+    print("Ele ataca usando páginas e runas vivas.\n")
+
+    print("O que você faz?")
+
+    print('1- Lançar feitiços diretamente contra o Arcano')
+    print('2- Atacar o grimório no centro da criatura')
+    print('3- Tentar destruir as runas que mantêm o corpo da entidade\n')
+
+    show_life(vida)
+    escolha = input("> ")
+    time.sleep(1)
+
+
+    # 1º FASE BOSS
+    if (escolha == '1'):
+        print()
+        print("Ao ver as páginas vindo em sua direção, você ergue seu cajado pronto para revidar.")
+        print("Lança o feitiço: Chuva Arcana")
+        print("Do seu cajado é emanado múltiplos mísseis arcanos, em direção da criatura profanada e dos livros.\n")
+        time.sleep(2)
+
+        print("A colisão de livros e magia termina em sucesso, com a magia chegando a atravessar os livros e atingindo a criatura, rasgando várias partes do seu corpo.")
+        print("Porém os livros destruídos reaparecem, voltando ao corpo do profanado, reconstruindo as partes destruídas.")
+        print("Alguns livros continuaram avançando a você e atacando no processo.\n")
+
+        vida, dano = random_damage(vida, armor)
+
+        print(f'Você recebeu {dano} de dano.')
+        show_life(vida)
+        print()
+
+    elif(escolha == '2'):
+        print()
+        print("Ao ver as páginas vindo em sua direção, você ergue seu cajado pronto para revidar.")
+        print("Lança o feitiço: Raio Arcano")
+        print("Do seu cajado é emanado um feixe de energia, em direção da criatura profanada e dos livros.\n")
+        time.sleep(2)
+
+        print("Seu feitiço atravessa os livros com sucesso e atinge o grimório no centro da criatura.")
+        print("A criatura se contorce violentamente.")
+        print("Os gritos de dor das vozes mescladas é agoniante.\n")
+       
+    elif (escolha == '3'):
+        print()
+        print("Talvez atacar diretamente não seja a solução.")
+        print("Você tenta controlar sua mana e conecta-las as runas compostas no corpo da criatura.\n")
+
+        print("A tentativa termina em sucesso, você consegue interferir no fluxo das runas.")
+        print("Algumas das runas que compõe o corpo do Arcano Profanado explodem em fragmentos de magia.\n")
+        time.sleep(2)
+
+        print("Porém esses fragmentos, vão em sua direção, chocando com você.\n")
+        vida, dano = random_damage(vida, armor)
+
+        print(f'Você recebeu {dano} de dano.')
+        show_life(vida)
+        print()
+     
+    else: 
+        logout()
+    
+    #2º FASE BOSS
+    time.sleep(2)
+    print("A criatura cambaleia com sua última ação.")
+    print('O Mago Profanado então ruge violentamente com dezenas de vozes ao mesmo tempo.')
+    print("Ao redor da criatura, as páginas começam a girar mais violentamente e as runas começam a brilhar mais.")
+    print("A criatura se reorganiza e sua forma cresce ainda mais.\n")
+
+    time.sleep(2)
+    print("O rugido começa a ficar cada vez mais estridente.")
+    print("Na sua mente você começa a ouvir as dezenas de sussuros...\n")
+    time.sleep(2)
+
+    print("'Nós buscamos conhecimento...'")
+    print("'Poder...'")
+    print("'Imortalidade...'\n")
+
+    print("'E encontramos... isto.'\n")
+    
+    print("'Você não entende, aprendiz...'")
+    print("'Agora... nós SOMOS o grimório.'\n")
+
+    time.sleep(2)
+    print("Uma voz grossa se destaca e você ouve...\n")
+    time.sleep(2)
+
+    print("'Venha...'")
+
+    print("'Junte-se a nós.'")
+
+    print("'Seu conhecimento será... nosso também.'\n")
+    time.sleep(2)
+    
+    print('Você sente que as vozes estão te corrompendo.\n')
+
+    print("O que você faz?\n")
+
+    print("1- Resistir ao ataque mental e continuar atacando.")
+    print("2- Usar magia para silenciar as vozes.")
+    print("3- Concentrar energia e atacar o grimório novamente.\n")
+
+    show_life(vida)
+
+    escolhaFaseDois = input('> ')
+    time.sleep(1)
+
+    if(escolhaFaseDois =='1'):
+        print()
+        print("Você tenta ignorar as vozes")
+        print("Se preparando para lançar mais feitiços.")
+        print("As vozes aumentam, como uma tentativa de que você perca a concentração.\n")
+        time.sleep(2)
+        
+        print("Porém você resiste, e continua lançando sua magia em direção ao Arcano.")
+        print("Seus feitiços estão sendo efetivos...")
+        print("O corpo da criatura foi danificado.\n")
+        time.sleep(2)
+
+        print("Entretando, o sangue descendo do seu nariz e ouvidos, comprova o fato que você também não saiu impune.\n")
+
+        vida, dano = random_damage(vida, armor)
+
+        print(f"Você recebeu {dano} de dano.")
+        show_life(vida)
+        print()
+   
+    if(escolhaFaseDois =='2'):
+        print()
+        print("Concentrando mana no seu cajado, você lança seu feitiço: Calmaria")
+        print("Um feitiço que invoca uma área onde o som não faz efeito.")
+        print("Ao seu redor, uma pequena esfera no tom de azul claro perpetua.\n")
+        time.sleep(2)
+        print("Você sente as vozes no interior da sua mente irem embora.")
+        print("Se estabilizando, você redireciona seu olhar ao profanado.\n")
+
+        print("A criatura se contorce mais uma vez, como se o feitiço também tivesse afetado ele mesmo.\n")
+    
+    if(escolhaFaseDois =='3'):
+        print()
+        print()
+        print("Ignorando as vozes pulsando na sua cabeça.")
+        print("Você ergue seu cajado preparando para lançar mais um feitiço.")
+        print("As vozes aumentam, como uma tentativa de que você perca a concentração.\n")
+        time.sleep(2)
+        
+        print("Porém você resiste, e continua lançando sua magia em direção ao Arcano.\n")
+
+        print('Raio Arcano\n')
+
+        print("O feixe de energia sai em direção ao grimório da criatura.")
+        print("O choque entre magia e grimório acontece, e a efetividade é comprovada com a contorção do profanado.\n")
+        time.sleep(2)
+
+        print("Entretando, o sangue descendo do seu nariz e ouvidos, comprova o fato que você também não saiu impune.\n")
+
+        vida, dano = random_damage(vida, armor)
+
+        print(f"Você recebeu {dano} de dano.")
+        show_life(vida)
+        print()
+ 
+    else: 
+        logout()
+
+
+    #3º E ULTIMA FASE DO BOSS
+    time.sleep(2)
+
+    print()
+    print("A criatura recua alguns passos após seus golpes.")
+    print("Por um instante... ela parece instável.\n")
+    time.sleep(2)
+   
+    print("O grimório em seu núcleo começa a pulsar de forma irregular.")
+    print("As páginas ao redor da entidade desaceleram...")
+    print("...e então começam a girar novamente.")
+    print("Muito mais rápido que antes.2\n")
+    time.sleep(2)
+
+   
+    print("Duas runas antigas surgem no ar ao redor da criatura.")
+    print("Uma aura sombria sai delas e vai de encontro ao corpo da criatura")
+    print("Como se as runas estivessem alimentando o Arcano Profanado.\n")
+    time.sleep(2)
+
+
+   
+    print("A entidade se curva para frente.")
+    print("Sua forma começa a distorcer.\n")
+
+    print("Por um breve momento, ecos distantes atravessam o salão.\n")
+    
+    print("'Isso... precisa acabar...'\n")
+
+    print("'Controle... está falhando...'\n")
+    time.sleep(2)
+
+
+    print("O grimório então se abre completamente.")
+    print("Todas as páginas se espalham no ar como um vendaval arcano.")
+    print("As páginas começam a se fundir novamente ao corpo da entidade.\n")
+    time.sleep(2)
+
+    print("Mas agora sua forma mudou.")
+    print("Runas quebradas percorrem toda sua estrutura.")
+    print("A energia arcana ao redor dela pulsa de forma caótica.")
+    print("A forma da entidade se expande, alimentada por energia instável.")
+    print("A pressão mágica no salão aumenta drasticamente.\n")
+    time.sleep(2)
+
+
+    print("O Arcano Profanado entra em um estado final e descontrolado.")
+    print("A batalha atinge seu clímax.\n")
+    time.sleep(2)
+
+    print("O profanado direciona seu olha a você e levanta os braços")
+    print("A energia se reune totalmente no grimório localizado no centro da criatura.")
+    print("Como se fosse lançar um feitiço devastador.\n")
+
+    print("O que você faz?\n")
+
+    print("1- Liberar todo seu poder contra o profanado")
+    print("2- Atacar diretamente o grimório.")
+    print("3- Tentar destruir as runas ao redor da criatura.\n")
+
+    show_life(vida)
+    escolhaFaseTres = input("> ")
+    time.sleep(1)
+
+    if (escolhaFaseTres =='1'):
+        print()
+        print("O poder do Arcano Profanado cresce de forma descontrolada.")
+        print("Runas quebradas percorrem seu corpo como rachaduras em vidro.")
+        print("O grimório em seu centro vibra violentamente.")
+        print("As páginas giram tão rápido que se tornam apenas um borrão de energia arcana.\n")
+        time.sleep(2)
+
+        print("Você sente a pressão mágica esmagar o ar ao seu redor.")
+        print("A criatura está reunindo tudo o que resta.\n")
+
+        time.sleep(2)
+        print("Por um momento... tudo fica em silêncio.\n")
+        time.sleep(2)
+
+        print("Então você faz o mesmo.\n")
+        print("Você sabe que este é último golpe, tanto para você, quanto para o Arcano Profanado.")
+        print("Você ergue seu cajado preparando para lançar um dos seus feitiços supremos: Lança Prismática\n")
+        time.sleep(2)
+
+        print("Runas arcanas começam a girar ao seu redor, o ar se distorce e um feixe multicolorido surge em suas mãos.")
+        print("A energia cresce em intensidade, cada cor da lança pulsa como se fosse um fragmento de estrela.\n")
+        time.sleep(2)
+        
+        print("Novamente você começa a ouvir as vozes na sua cabeça...\n")
+        time.sleep(2)
+     
+        print("'Venha então, aprendiz.'\n")
+
+        print("'Mostre-me... o limite do seu poder.'\n")
+        time.sleep(2)
+
+        print("AS vozes somem e o Arcano Profanado finalmente lança seu feitiço, um feixe de pura energia em sua direção.")
+
+        print("Aceitando o desafio, você dispara a Lança Prismática contra o Arcano Profanado!\n")
+        time.sleep(2)
+
+        print("As magias se chocam violentamente, gerando uma festa de cores e uma onda de choque que faz a sala enorme tremer.")
+        print("Porém o embate é decidido, sua Lança Prismática perfura o feixe de energia disparado pela criatura.\n")
+
+        print("Ao perceber isso, o Arcano Profanado abre os braços... parece esperar pelo seu fim.")
+        
+        print("Na sua mente você ouve novamente uma voz, porém dessa vez, uma voz calma e gentil.\n")
+        time.sleep(2)
+
+        print("Nada mal para um novato... Obrigado...\n")
+        time.sleep(2)
+
+        print("Então sua magia atinge a criatura, consumindo todo seu corpo.")
+        print("Primeiro as páginas.")
+        print("Depois as runas.")
+        print("A forma monstruosa antes vista, desapareceu, só uma coisa sobrou.\n")
+
+        print("O grimório... lentamente caindo no chão.")
+
+        print("A pressão mágica e a presença maligna presentes naquele lugar somem.\n")
+        time.sleep(2)
+
+
+        print("Você derrotou o Arcano Profanado\n")
+        time.sleep(2)
+
+        print("A sobrecarga da mana usada no seu último golpe retorna, evidenciada pela tosse com sangue que você libera.")
+
+        vida, dano = random_damage(vida, armor)
+        print(f"Você recebeu {dano} de dano.")
+        show_life(vida)
+
+    elif (escolhaFaseTres =='2'):
+        print()
+        print("Seu olhar se fixa no centro da criatura.")
+        print("No grimório.")
+        print("Ignorando os ataques da entidade, você avança.")
+        print("Erguendo seu cajado em direção ao profanado. Você solta o feitiço: Raio Arcano\n")
+        time.sleep(2)
+      
+        print("O Arcano Profanado percebe.")
+
+        print("'Não...'\n")
+
+        print("'NÃO TOQUE NO GRIMÓRIO!'\n")
+        time.sleep(2)
+
+        print("Você reúne toda a força que ainda resta, acumulando mais poder ainda no seu feitiço.")
+        print("O feitiço chega ao seu destino, o grimório racha.")
+        print("Uma fissura atravessa sua capa antiga.\n")
+        time.sleep(2)
+        
+        print("Por um instante... nada acontece.")
+        print("Então as runas começam a brilhar.")
+
+        print("Uma.")
+        print("Depois outra.")
+        print("Até que todas vão se acendendo em uma espécie de cadeia.\n")
+
+        print("A energia acumulada começa a escapar.")
+        print("As páginas se rasgam.")
+        print("O ar ao redor vibra violentamente.\n")
+        time.sleep(2)
+
+        print("BOOOMM!")
+
+        print("Uma explosão arcana atravessa o salão.")
+        print("Você é arremessado violentamente para trás, o choque é tremendo e seu corpo sofre com isso.\n")
+        time.sleep(2)
+       
+        print("Quando a luz desaparece...")
+        print("A entidade não está mais lá.\n")
+
+        print("No chão, apenas uma coisa repousa...")
+        print("O grimório...\n")
+        time.sleep(2)
+
+        print("O Arcano Profanado foi derrotado.")
+        time.sleep(2)
+
+        print('Você se levanta, o dano causado pela explosão é significativo, você mal consegue se manter de pé.')
+        vida, dano = random_damage(vida, armor)
+
+        print(f'Você recebeu {dano} de dano.')
+        show_life(vida)
+        print()
+   
+    elif (escolhaFaseTres =='3'):
+        print()
+        print("Seu olhar percorre a sala. mas sua atenção é capturada por algo.")
+        print("As duas runas que brilham intensamente ao redor da critura, uma de cada lado.")
+        print("A mesma energia que envolve o Arcano Profanado flui delas.\n")
+        time.sleep(2)
+        
+        print("Então você entende.")
+        print("A criatura está sendo alimentada por essas runas.\n")
+
+
+        print("Em vez de atacar a entidade...")
+        print("Você ataca a primeira runa.\n")
+        
+        print("O símbolo se parte.")
+        print("A energia da sala vacila.\n")
+        time.sleep(2)
+
+        print("O Arcano Profanado recua e ruge em dor.\n")
+        
+        print("'O que pensa que está fazendo...?'\n")
+
+        print("Mesmo com dezenas de vozes mescladas em uma, você conseguia sentir o desespero embutido nela\n")
+        time.sleep(2)
+        
+        print("Se havia desespero, significa que a estratégia está dando certo.")
+        print("Sem perder tempo você logo se concentra runa remanescente.\n")
+
+        print("Sem muitos esforços...")
+        print("Você destrói a segunda runa.\n")
+        time.sleep(2)
+    
+        print("A energia que sustentava o ritual desaparece.")
+        print("As páginas ao redor da criatura começam a cair.")
+        print("Sua forma se torna instável.\n")
+        time.sleep(2)
+
+        print("As vozes na sua cabeça retornam a ecoar.\n")
+
+        print("'NÃO! NÃO! NÃO!'\n")
+
+        print("'NÓS... DERROTADOS POR UM MERO APRENDIZ!'\n")
+
+        print("'...MALDITO SEJA!'\n")
+
+        print("Rancor e lamento emanavam das vozes...\n")
+
+        print("Dentre as inúmeras vozes, surgiu uma outra... uma gentil e calma.")
+        print("Voz essa que só falou uma coisa.\n")
+        time.sleep(2)
+
+        print("'Obrigado...'\n")
+        time.sleep(2)
+
+        print("Sem o poder das runas...")
+        print("A criatura arcana perdeu sua força.\n")
+
+        print("O corpo do Arcano Profanado se desfaz lentamente em tinta e papel, deixando uma única coisa para trás...\n")
+        time.sleep(2)
+        
+        print("O grimório...\n")
+        time.sleep(2)
+        
+        print("A pressão mágica e a presença maligna presentes naquele lugar somem.\n")
+        print("A sala finalmente fica em silêncio.")
+  
+    else:
+        logout()
+
+# FINAIS DO MAGE PATH
+def mage_end():
+    print()
+    print("Você se aproxima do grimório.\n")
+
+    print("O motivo de todo esses acontecimentos...")
+    print("Algo tão poderoso a alguns momentos atrás, agora inofensivo.\n")
+    time.sleep(2)
+
+    print("Porém você detecta que o grimório só está em um estado de 'hibernação'")
+    print("Se você deixar o grimório ali, só será questão de tempo, para o grimório voltar a o que era antes.")
+    time.sleep(2)
+
+    print("Sabendo disso, você não pode simplesmente deixar o grimório.\n")
+    print("O que você faz?\n")
+
+    print("1- Destruir o grimório")
+    print("2- Levar o grimório para a Academia Raya Lucaria")
+    print("3- Se apossar do grimório\n")
+
+
+    escolhaFinal = input("> ")
+    time.sleep(1)
+
+
+    if(escolhaFinal =='1'):
+        print()
+        print("Você ergue seu cajado diante do grimório.")
+        print("Se ele causou tudo isso... então precisa ser destruído.\n")
+        time.sleep(2)
+
+        print("Você desfere um golpe direto contra a capa do livro.")
+        print("O impacto ecoa pela sala.")
+        time.sleep(2)
+
+        print("Mas o grimório... não se parte.")
+        print("Nem mesmo um arranhão.\n")
+        time.sleep(2)
+
+        print("Runas começam a surgir lentamente em sua superfície.")
+        print("Como se o grimório tivesse despertado.")
+        time.sleep(2)
+
+        print("Uma energia fria percorre o ar ao seu redor.")
+        print("Você tenta se afastar...\n")
+        time.sleep(2)
+
+        print("Mas já é tarde demais.\n")
+
+        print("As páginas do grimório se abrem sozinhas.")
+        print("Uma força invisível puxa você em direção a ele.")
+        print("Sua visão começa a escurecer.")
+        print("A energia arcana envolve seu corpo.\n")
+        time.sleep(2)
+
+
+        print("Então você entende... o grimório não pode ser destruído.")
+        print("Ele apenas... coleta.\n")
+        time.sleep(2)
+
+        print("As páginas começam a girar ao seu redor.\n")
+
+        print("Cada uma preenchida com nomes.")
+        print("Magos.")
+        print("Aprendizes.")
+        print("Aqueles que tentaram controlar seu poder.\n")
+        time.sleep(3)
+
+        print("Agora... mais um nome é adicionado.\n")
+
+        print("Sua voz ecoa junto às outras.")
+
+        print("'Mais um...'")
+
+        print("'Mais uma mente para o grimório...'\n")
+
+
+        print("Quando tudo termina...")
+
+        print("O grimório se fecha lentamente.\n")
+        time.sleep(2)
+
+        print("Esperando...\n")
+
+        print("Esperando pelo próximo mago curioso.\n")
+
+    elif(escolhaFinal =='2'):
+        print()
+        print("Você observa o grimório em silêncio.\n")
+
+        print("Destruí-lo pode não ser possível.")
+        print("E deixá-lo aqui seria apenas adiar outra tragédia.\n")
+        time.sleep(2)
+
+        print("Existe apenas um lugar capaz de lidar com algo assim.")
+        print("A Academia Raya Lucaria, onde você faz parte.\n")
+        time.sleep(2)
+
+        print("Você cuidadosamente fecha o grimório.")
+        print("Por um momento... as páginas parecem resistir.")
+        print("Mas logo tudo fica em silêncio.\n")
+        time.sleep(2)
+
+        print("Você o envolve em tecido e o leva consigo.")
+        print("A jornada até a academia é longa.")
+        print("E durante todo o caminho...")
+        print("você sente como se algo estivesse observando.\n")
+        time.sleep(2)
+
+        print("Dias depois, as torres de Raya Lucaria finalmente surgem no horizonte.")
+        print("Os magos da academia recebem o grimório com cautela.\n")
+        time.sleep(2)
+
+        print("Runas de contenção são imediatamente preparadas.")
+        print("Correntes arcanas envolvem o livro.")
+        print("Selos antigos são gravados ao redor dele.\n")
+        time.sleep(2)
+
+        print("Um dos magos anciões da academia observa o grimório em silêncio.")
+        print("'Uma relíquia perigosa...'")
+        print("'Mas também... uma fonte incomparável de conhecimento.'\n")
+        print("diz ele.")
+        time.sleep(2)
+
+        print("O grimório é então trancado nas profundezas da biblioteca proibida.")
+        print("Longe de olhos curiosos.")
+        print("Longe de mãos imprudentes.\n")
+        time.sleep(2)
+
+        print("Enquanto você deixa a academia...")
+        print("um leve som ecoa de dentro da biblioteca.")
+        print("Como o virar de uma página...\n")
+        time.sleep(2)
+
+        print("Talvez...")
+        time.sleep(2)
+        print("Talvez ainda não tenha acabado...")
+
+    elif(escolhaFinal =='1'):
+        print()
+        print("Você observa o grimório em silêncio.\n")
+        print("Destruí-lo parece impossível.")
+        print("E entregá-lo para outros... significaria perder um poder incomparável.\n")
+        time.sleep(2)
+
+        print("Então você toma sua decisão.")
+        print("Você estende a mão.")
+        print("E segura o grimório.\n")
+
+        print("Por um instante... nada acontece.")
+        print("Então as páginas se abrem sozinhas.\n")
+
+        print("Runas antigas começam a brilhar.")
+        print("A energia arcana invade seu corpo como uma tempestade.\n")
+        time.sleep(2)
+
+        print("As vozes tentam surgir.")
+        print("porém elas não o consomem.")
+        print("elas se curvam.\n")
+        time.sleep(2)
+
+        print("'Um novo portador...'")
+        print("'Um novo mestre...'\n")
+
+        print("Você fecha o grimório, agora sem poder mágico, virando apenas mais um livro comum.")
+        print("Você absorveu todo o poder que o grimório continha.")
+        print("E pela primeira vez... o poder responde apenas a você.\n")
+        time.sleep(2)
+
+        print("Dias depois, você deixa a Academia Raya Lucaria.")
+        print("Sem explicações.")
+        print("Sem despedidas.\n")
+        time.sleep(2)
+
+        print("Com o passar dos anos, seu poder cresce.")
+        print("Feitiços antes considerados impossíveis se tornam triviais.")
+        print("Reinos começam a temer seu nome, Velkarys\n")
+        time.sleep(3)
+
+        print("Décadas passam.")
+        print("Séculos talvez.")
+        print("Mas algo muda com o tempo.\n")
+        time.sleep(2)
+
+        print("A cada ano... as vozes ficam mais fortes.")
+        print("Mais presentes.")
+        print("Mais difíceis de ignorar.\n")
+        time.sleep(2)
+
+        print("O conhecimento que o grimório concedeu é infinito.")
+        print("Mas seu preço também é.\n")
+        time.sleep(2)
+
+        print("Lentamente... sua mente começa a mudar.")
+        print("Seus pensamentos.")
+        print("Seus desejos.")
+        print("Seu propósito.")
+        print("Até mesmo sua aparência muda...\n")
+
+        time.sleep(2)
+
+        print("O mundo deixa de parecer algo a ser protegido.")
+        print("E passa a parecer... algo a ser governado.\n")
+        time.sleep(2)
+
+        print("Era após era, sua figura se torna uma lenda.")
+        print("Um arquimago impossível de derrotar.")
+        print("Um soberano das artes arcanas.\n")
+        time.sleep(2)
+
+        print("Até que um novo nome começa a surgir nas histórias.\n")
+
+        print("O Rei Demônio, Velkarys...\n")
+        time.sleep(2)
+
+        print("Nas profundezas de uma fortaleza...")
+        print("no coração da terra dos demônios")
+        print("um trono se encontra no centro de uma sala")
+        print("E sobre ele...")
+        time.sleep(2)
+
+        print("Aquele que um dia foi um mago...")
+        print("agora aguarda o próximo herói.")
+        print("Alguém forte o suficiente para desafiá-lo.\n")
+
+    else: 
+        logout()
+
+    time.sleep(4)
+    print("\n=== FIM ===\n")
+
+    print("OBRIGADO POR JOGAR!")
+    print("TENTE TAMBÉM AS OUTRAS CLASSES.")
+    exit()
 
