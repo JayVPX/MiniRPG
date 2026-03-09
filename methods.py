@@ -1,5 +1,6 @@
 from paths.magePath import *
 from paths.roguePath import *
+from paths.warriorPath import *
 from methods import *
 from utils import *
 import time
@@ -65,13 +66,39 @@ def select_class():
         print("Você é o guerreiro da profecia, escolhido pela Deusa da Luz, Luminarie, abençoado com um poder sagrado latente.")
         print("Seu destino sempre esteve escrito nas estrelas. Destrua o mal que caminha, ou seja, o Rei Demônio que assola estas terras.")
         print("Com coragem e fé inabalável, você se vê cruzando as terras devastadas de Ashland, lar dos demônios.")
-        print("Após dias caminhando sob o inferno na terra, diante de você está a Fortaleza de Velkarys, morada do Rei Demônio.")
+        print("Indo em direção a Fortaleza de Velkarys, a capital do reino demoníaco, e lar do seu soberano.")
         print()
     
     return classe
 
 def warrior_path():
-    print("UGA BUGA UGA")
+    vidaInicial = 30
+    buffArmor = False
+    helpCivilian= True
+
+    #INTRO
+    time.sleep(2)
+    
+    print("Quanto tempo faz que você marcha nessas terras devastadas?\n")
+
+    print("Dias? Semanas? talvez até Meses?\n")
+
+    print("Você não sabe, mas mesmo assim continuo marchando, tendo fé em si mesmo, confiando na profecia...")
+    print("Seguir em frente, é apenas isso que você faz, não importa o inimigo, não importa a circustância.\n")
+    
+    print("Afinal, é isso que um Herói faz...\n")
+
+    time.sleep(2)
+
+    print("Cansativo? com certeza, até aqui foi uma jornada árdua, como se eu tivesse andado no próprio inferno.")
+    print("Porém esse cansaço parece sumir, a medida que seus olhos podem repousar no seu objetivo.\n")
+
+    print("A Fortaleza de Velkarys, a grande capital do Reino Demoníaco, ali em sua frente.")
+
+    # First Step
+    warrior_start(vidaInicial, buffArmor)
+
+
 
 def mage_path():
     vidaInicial = 30
@@ -107,7 +134,7 @@ def mage_path():
     mage_end()                              #END
 
 def rogue_path():
-    vidaInicial = 50
+    vidaInicial = 30
     buffArmor = False
 
     # Flags para registrar acontecimentos que mudam o rumo a longo prazo
