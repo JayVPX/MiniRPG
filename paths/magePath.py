@@ -1837,7 +1837,7 @@ def mage_end():
         time.sleep(2)
         print("Talvez ainda não tenha acabado...")
 
-    elif(escolhaFinal =='1'):
+    elif(escolhaFinal =='3'):
         print()
         print("Você observa o grimório em silêncio.\n")
         print("Destruí-lo parece impossível.")
