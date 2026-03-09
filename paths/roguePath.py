@@ -93,7 +93,7 @@ def rogue_start(vida: float, armor: bool):
         print("Mas quem sabe o tamanho das riquezas poderiam ter lá...")
         print("GAME OVER")
         print()
-        exit()
+        restart()
     else:
         logout()
     
@@ -406,7 +406,7 @@ def beast_encounter(vida: float, armor: bool):
             print("Você morreu.")
             print("GAME OVER")
             print()
-            exit()
+            restart()
 
         elif (respostaSecond == '2'):
             print("O rugido da criatura faz o chão vibrar.")
@@ -453,7 +453,7 @@ def beast_encounter(vida: float, armor: bool):
             print("Você morreu.")
             print("GAME OVER")
             print()
-            exit()
+            restart()
 
         elif (respostaSecond == '3'):
             print("Quando você ouve a criatura avançando em sua direção, decide agir rápido.")
@@ -499,7 +499,7 @@ def beast_encounter(vida: float, armor: bool):
             print("Você morreu.")
             print("GAME OVER")
             print()
-            exit()
+            restart()
         else:
             logout()
 
@@ -559,7 +559,7 @@ def beast_encounter(vida: float, armor: bool):
         print("Você morreu.")
         print("GAME OVER")
         print()
-        exit()
+        restart()
     elif (resposta == '4'):
         print("O instinto de sobrevivência fala mais alto que qualquer plano racional.")
         time.sleep(1)
@@ -625,7 +625,7 @@ def beast_encounter(vida: float, armor: bool):
         print("Você morreu.")
         print("GAME OVER")
         print()
-        exit()
+        restart()
     else:
         logout()
 
@@ -2386,7 +2386,7 @@ def mimic_battle(vida: float, armor: bool):
             print("Você morreu.")
             print("GAME OVER")
             print()
-            exit()
+            restart()
 
     elif (resposta == '2'):
 
@@ -2639,7 +2639,7 @@ def rogue_end(vida: float, armor: bool, poisoned: int, beast_defeated : int):
         print("O silêncio toma conta da sala.")
         print("GAME OVER")
         print()
-        exit()
+        restart()
 
     time.sleep(1)
     print("Você precisa sair daquele lugar.")
@@ -2731,7 +2731,7 @@ def rogue_end(vida: float, armor: bool, poisoned: int, beast_defeated : int):
         print("Nunca voltou para casa.")
         print("GAME OVER")
         print()
-        exit()
+        restart()
 
     time.sleep(1)
     print("Você caminha lentamente por aquele longo corredor.")
@@ -2780,7 +2780,7 @@ def rogue_end(vida: float, armor: bool, poisoned: int, beast_defeated : int):
     time.sleep(1)
     print("YOU WIN")
     print()
-    exit()
+    restart()
     
 
 

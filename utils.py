@@ -23,7 +23,7 @@ def random_damage(vida: float, armor: bool):
     return vida, dano
 
 def random_heal(vida: float):
-    heal = random.randint(2, 10)
+    heal = random.randint(2, 5)
     vida = min(vida + heal, 30)
     return vida, heal
 
