@@ -63,7 +63,7 @@ def mage_start(vida: float, armor: bool):
             print("Tudo bem, ninguém irá lhe julgar, magos não são conhecidos exatamente pela coragem...")
             print("GAME OVER")
             print()
-            exit()
+            restart()
         else:
            logout()
 
@@ -81,7 +81,7 @@ def mage_start(vida: float, armor: bool):
         print("Tudo bem, ninguém irá lhe julgar, magos não são conhecidos exatamente pela coragem...")
         print("GAME OVER")
         print()
-        exit()
+        restart()
     else:
         logout()
 
@@ -164,7 +164,7 @@ def mage_tower_entrance(vida: float, armor: bool):
             print("Tudo bem, ninguém irá lhe julgar, magos não são conhecidos exatamente pela coragem...")
             print("GAME OVER")
             print()
-            exit()  
+            restart()  
        
         else: 
             logout()
@@ -216,7 +216,7 @@ def mage_tower_entrance(vida: float, armor: bool):
             print("Tudo bem, ninguém irá lhe julgar, magos não são conhecidos exatamente pela coragem...")
             print("GAME OVER")
             print()
-            exit()  
+            restart()  
         else:
             logout()
     # Logout
@@ -333,7 +333,7 @@ def mage_library(vida: float, armor: bool):
             print("Você sai correndo por onde você veio.")
             print("Tudo bem, ninguém irá lhe julgar, magos não são conhecidos exatamente pela coragem...")
             print("GAME OVER")
-            exit()
+            restart()
         else:
             logout()
   
@@ -670,6 +670,19 @@ def mage_miniBoss(vida: float, armor: bool):
 
             print()
             print("Você segue para a saída do laboratório.")
+            
+            print()
+            time.sleep(2)
+            print('Ao passar da saída do laboratório.')
+            print("Um círculo mágico aparece instantaneamente no seu pé.")
+            print("Você percebe que é um círculo mágica de teletransporte.")
+            print("Sem ter o que fazer, você apenas aceita o destino, temendo no que pode estar a vir.\n")
+
+            print('...\n')
+        
+            print('...\n')
+        
+            print('...\n')
             return vida
            
         else:
@@ -710,6 +723,18 @@ def mage_miniBoss(vida: float, armor: bool):
                 print("Você encara os restos do que antes era um Golem implacável.")
                 print("Aliviado você, segue seu caminho para a saída do laboratório.")
 
+                print()
+                time.sleep(2)
+                print('Ao passar da saída do laboratório.')
+                print("Um círculo mágico aparece instantaneamente no seu pé.")
+                print("Você percebe que é um círculo mágica de teletransporte.")
+                print("Sem ter o que fazer, você apenas aceita o destino, temendo no que pode estar a vir.\n")
+
+                print('...\n')
+            
+                print('...\n')
+            
+                print('...\n')
                 return vida
                 
 
@@ -737,7 +762,19 @@ def mage_miniBoss(vida: float, armor: bool):
 
                 print()
                 print("Com suas energias revitalizadas, você segue seu caminho para a saída do laboratório.")
+                
+                print()
+                time.sleep(2)
+                print('Ao passar da saída do laboratório.')
+                print("Um círculo mágico aparece instantaneamente no seu pé.")
+                print("Você percebe que é um círculo mágica de teletransporte.")
+                print("Sem ter o que fazer, você apenas aceita o destino, temendo no que pode estar a vir.\n")
 
+                print('...\n')
+            
+                print('...\n')
+            
+                print('...\n')
                 return vida
             else:
                 logout()
@@ -796,6 +833,20 @@ def mage_miniBoss(vida: float, armor: bool):
             print("Mesmo ferido, você sabe que venceu, o núcleo foi destruído e o Golem não se erguerá novamente.")
             print("Você continua seu caminho para fora do laboratório.")
 
+            
+            print()
+            time.sleep(2)
+            print('Ao passar da saída do laboratório.')
+            print("Um círculo mágico aparece instantaneamente no seu pé.")
+            print("Você percebe que é um círculo mágica de teletransporte.")
+            print("Sem ter o que fazer, você apenas aceita o destino, temendo no que pode estar a vir.\n")
+
+            print('...\n')
+        
+            print('...\n')
+        
+            print('...\n')
+
             return vida
        
         elif(escolhaThree == '2'):
@@ -814,6 +865,20 @@ def mage_miniBoss(vida: float, armor: bool):
             print("Você derrotou o Golem.\n")
 
             print("Encarando os restos da criatura, você caminha para a saída do laboratório.")
+
+            
+            print()
+            time.sleep(2)
+            print('Ao passar da saída do laboratório.')
+            print("Um círculo mágico aparece instantaneamente no seu pé.")
+            print("Você percebe que é um círculo mágica de teletransporte.")
+            print("Sem ter o que fazer, você apenas aceita o destino, temendo no que pode estar a vir.\n")
+
+            print('...\n')
+        
+            print('...\n')
+        
+            print('...\n')
             return vida
 
         elif(armor == False and escolhaThree == '3'):
@@ -838,6 +903,20 @@ def mage_miniBoss(vida: float, armor: bool):
             time.sleep(2)
 
             print("Encarando os restos da criatura, você caminha para a saída do laboratório.")
+
+            
+            print()
+            time.sleep(2)
+            print('Ao passar da saída do laboratório.')
+            print("Um círculo mágico aparece instantaneamente no seu pé.")
+            print("Você percebe que é um círculo mágica de teletransporte.")
+            print("Sem ter o que fazer, você apenas aceita o destino, temendo no que pode estar a vir.\n")
+
+            print('...\n')
+        
+            print('...\n')
+        
+            print('...\n')
             return vida
         
         elif(armor == True and escolhaThree =='3'):
@@ -860,6 +939,20 @@ def mage_miniBoss(vida: float, armor: bool):
 
             print()
             print("Após se recuperar dessa onda psíquica, você caminha para fora do laboratório.")
+
+            
+            print()
+            time.sleep(2)
+            print('Ao passar da saída do laboratório.')
+            print("Um círculo mágico aparece instantaneamente no seu pé.")
+            print("Você percebe que é um círculo mágica de teletransporte.")
+            print("Sem ter o que fazer, você apenas aceita o destino, temendo no que pode estar a vir.\n")
+
+            print('...\n')
+        
+            print('...\n')
+        
+            print('...\n')
             return vida
 
         elif(armor == False and escolhaThree == '4'):
@@ -882,6 +975,19 @@ def mage_miniBoss(vida: float, armor: bool):
 
             print()
             print("Após se recuperar dessa onda psíquica, você caminha para fora do laboratório.")
+            
+            print()
+            time.sleep(2)
+            print('Ao passar da saída do laboratório.')
+            print("Um círculo mágico aparece instantaneamente no seu pé.")
+            print("Você percebe que é um círculo mágica de teletransporte.")
+            print("Sem ter o que fazer, você apenas aceita o destino, temendo no que pode estar a vir.\n")
+
+            print('...\n')
+        
+            print('...\n')
+        
+            print('...\n')
             return vida
         
         else:
@@ -893,29 +999,13 @@ def mage_miniBoss(vida: float, armor: bool):
         print("Você foge da torre, com sucesso.")
         print("Tudo bem, ninguém irá lhe julgar, magos não são conhecidos exatamente pela coragem...")
         print("GAME OVER")
-        exit()
+        restart()
    
     else:
         logout()
     
 
-    print()
-    time.sleep(2)
-    print('Ao passar da saída do laboratório.')
-    print("Um círculo mágico aparece instantaneamente no seu pé.")
-    print("Você percebe que é um círculo mágica de teletransporte.")
-    print("Sem ter o que fazer, você apenas aceita o destino, temendo no que pode estar a vir.\n")
-
-    print('...\n')
- 
-    print('...\n')
- 
-    print('...\n')
-
-
-
-
-    return vida, 
+    return vida
 
 ## Escadaria
 def mage_staircase(vida: float, armor: bool):
@@ -1313,7 +1403,7 @@ def mage_boss_fight(vida: float, armor: bool):
         show_life(vida)
         print()
    
-    if(escolhaFaseDois =='2'):
+    elif(escolhaFaseDois =='2'):
         print()
         print("Concentrando mana no seu cajado, você lança seu feitiço: Calmaria")
         print("Um feitiço que invoca uma área onde o som não faz efeito.")
@@ -1324,7 +1414,7 @@ def mage_boss_fight(vida: float, armor: bool):
 
         print("A criatura se contorce mais uma vez, como se o feitiço também tivesse afetado ele mesmo.\n")
     
-    if(escolhaFaseDois =='3'):
+    elif(escolhaFaseDois =='3'):
         print()
         print()
         print("Ignorando as vozes pulsando na sua cabeça.")
@@ -1839,7 +1929,5 @@ def mage_end():
     time.sleep(4)
     print("\n=== FIM ===\n")
 
-    print("OBRIGADO POR JOGAR!")
-    print("TENTE TAMBÉM AS OUTRAS CLASSES.")
-    exit()
+    restart()
 

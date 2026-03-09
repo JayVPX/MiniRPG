@@ -1,5 +1,6 @@
 import random
 
+
 def random_damage(vida: float, armor: bool):
     dano = random.randint(1,5)
 
@@ -12,8 +13,12 @@ def random_damage(vida: float, armor: bool):
     if (vida <= 0):
         print()
         print("Você morreu")
+        print()
         print("GAME OVER")
-        exit()
+        print()
+        input("Pressione ENTER para sair...")
+
+
     return vida, dano
 
 def random_heal(vida: float):
@@ -25,5 +30,20 @@ def show_life(vida):
     print(f"Sua vida atual: {vida}/30")
 
 def logout():
-    print("Opção inválida. Reinicie o jogo.")
+    print("Opção inválida.")
+    print()
+
+    print("OBRIGADO POR JOGAR!")
+    input("Pressione ENTER para sair...")
+
     exit()
+
+
+
+def restart():
+    print()
+    print("OBRIGADO POR JOGAR!")
+    input("Pressione ENTER para sair...")
+
+    exit()
+

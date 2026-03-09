@@ -68,10 +68,6 @@ def select_class():
         print("Após dias caminhando sob o inferno na terra, diante de você está a Fortaleza de Velkarys, morada do Rei Demônio.")
         print()
     
-
-    else:
-        print("Opção inválida. Reinicie o jogo e escolha uma classe válida.")
-    
     return classe
 
 def warrior_path():
@@ -109,8 +105,6 @@ def mage_path():
     mage_boss_fight(vida, buffArmor)        #BOSS FIGHT
 
     mage_end()                              #END
-
-    
 
 def rogue_path():
     vidaInicial = 50
