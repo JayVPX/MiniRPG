@@ -171,7 +171,7 @@ def mage_tower_entrance(vida: float, armor: bool):
     # Decifrar runas
     elif (reposta == '2'):
         print()
-        print("Você se agacha, para ler em as runas brilhantes mas antigas que se encontram na entrada do corredor.")
+        print("Você se agacha, para ler as runas brilhantes mas antigas que se encontram na entrada do corredor.")
         print("Apesar de serem arcaícas, você ainda consegue entender...")
         print("Aquelas runas continham um aviso.")
         print("Há uma armadilha mágica que invocará um Espectro no corredor.")
@@ -1454,7 +1454,7 @@ def mage_boss_fight(vida: float, armor: bool):
     print("O grimório em seu núcleo começa a pulsar de forma irregular.")
     print("As páginas ao redor da entidade desaceleram...")
     print("...e então começam a girar novamente.")
-    print("Muito mais rápido que antes.2\n")
+    print("Muito mais rápido que antes.\n")
     time.sleep(2)
 
    
@@ -1493,7 +1493,7 @@ def mage_boss_fight(vida: float, armor: bool):
     print("A batalha atinge seu clímax.\n")
     time.sleep(2)
 
-    print("O profanado direciona seu olha a você e levanta os braços")
+    print("O profanado direciona seu olhar a você e levanta os braços")
     print("A energia se reune totalmente no grimório localizado no centro da criatura.")
     print("Como se fosse lançar um feitiço devastador.\n")
 
@@ -1656,15 +1656,13 @@ def mage_boss_fight(vida: float, armor: bool):
         time.sleep(2)
         
         print("Se havia desespero, significa que a estratégia está dando certo.")
-        print("Sem perder tempo você logo se concentra runa remanescente.\n")
+        print("Sem perder tempo você logo se concentra na runa remanescente.\n")
 
         print("Sem muitos esforços...")
         print("Você destrói a segunda runa.\n")
         time.sleep(2)
     
         print("A energia que sustentava o ritual desaparece.")
-        print("As páginas ao redor da criatura começam a cair.")
-        print("Sua forma se torna instável.\n")
         time.sleep(2)
 
         print("As vozes na sua cabeça retornam a ecoar.\n")
@@ -1673,12 +1671,9 @@ def mage_boss_fight(vida: float, armor: bool):
 
         print("'NÓS... DERROTADOS POR UM MERO APRENDIZ!'\n")
 
-        print("'...MALDITO SEJA!'\n")
-
         print("Rancor e lamento emanavam das vozes...\n")
 
         print("Dentre as inúmeras vozes, surgiu uma outra... uma gentil e calma.")
-        print("Voz essa que só falou uma coisa.\n")
         time.sleep(2)
 
         print("'Obrigado...'\n")

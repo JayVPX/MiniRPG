@@ -96,9 +96,14 @@ def warrior_path():
     print("A Fortaleza de Velkarys, a grande capital do Reino Demoníaco, ali em sua frente.")
 
     # First Step
-    warrior_start(vidaInicial, buffArmor)
+    vida, escolhaPathInicial = warrior_start(vidaInicial, buffArmor)
 
+    if escolhaPathInicial in ('1','3'):
+        warrior_entering_fortress(vida, buffArmor)
+    elif(escolhaPathInicial =='2'):
+        vida, helpCivilian = warrior_black_forest(vida, buffArmor, helpCivilian)
 
+    print(f'AJUDOU OU N: {helpCivilian}')
 
 def mage_path():
     vidaInicial = 30
