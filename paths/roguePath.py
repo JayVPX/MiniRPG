@@ -729,7 +729,7 @@ def beast_battle(vida: float, armor: bool):
             print()
             print("O que você faz?")
             print()
-            print("1- Tentar cortar sua garanta")
+            print("1- Tentar cortar sua garganta")
             print("2- Tentar cortar o tendão de sua pata dianteira\n")
 
             show_life(vida)
