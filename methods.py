@@ -74,7 +74,9 @@ def select_class():
 def warrior_path():
     vidaInicial = 30
     buffArmor = False
+
     helpCivilian= True
+    purifiedBeast = False
 
     #INTRO
     time.sleep(2)
@@ -100,10 +102,17 @@ def warrior_path():
 
     if escolhaPathInicial in ('1','3'):
         warrior_entering_fortress(vida, buffArmor)
-    elif(escolhaPathInicial =='2'):
-        vida, helpCivilian = warrior_black_forest(vida, buffArmor, helpCivilian)
+    elif(escolhaPathInicial == '2'):
+        vida, helpCivilian, purifiedBeast = warrior_black_forest(vida, buffArmor, helpCivilian)
 
-    print(f'AJUDOU OU N: {helpCivilian}')
+    vida, escolhaPathFinal = warrior_three_way(vida, buffArmor)
+
+    if(escolhaPathFinal =='1'):
+        warrior_castle_entrance(vida, buffArmor, helpCivilian)
+    elif(escolhaPathFinal =='2'):
+        warrior_rooftop(vida, buffArmor, helpCivilian)
+    elif(escolhaPathFinal =='3'):
+        warrior_old_temple(buffArmor, helpCivilian)
 
 def mage_path():
     vidaInicial = 30

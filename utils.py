@@ -2,7 +2,7 @@ import random
 
 
 def random_damage(vida: float, armor: bool):
-    dano = random.randint(1,5)
+    dano = random.randint(2,5)
 
     if(armor):
         dano = round(dano * 0.8)
