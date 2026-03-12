@@ -101,18 +101,22 @@ def warrior_path():
     vida, escolhaPathInicial = warrior_start(vidaInicial, buffArmor)
 
     if escolhaPathInicial in ('1','3'):
-        warrior_entering_fortress(vida, buffArmor)
+        vida = warrior_entering_fortress(vida, buffArmor)
     elif(escolhaPathInicial == '2'):
         vida, helpCivilian, purifiedBeast = warrior_black_forest(vida, buffArmor, helpCivilian)
 
     vida, escolhaPathFinal = warrior_three_way(vida, buffArmor)
 
     if(escolhaPathFinal =='1'):
-        warrior_castle_entrance(vida, buffArmor, helpCivilian)
+       vida = warrior_castle_entrance(vida, buffArmor, helpCivilian, purifiedBeast)
     elif(escolhaPathFinal =='2'):
-        warrior_rooftop(vida, buffArmor, helpCivilian)
+        vida = warrior_rooftop(vida, buffArmor, helpCivilian, purifiedBeast)
     elif(escolhaPathFinal =='3'):
-        warrior_old_temple(buffArmor, helpCivilian)
+        vida, buffArmor = warrior_old_temple(vida,buffArmor, helpCivilian)
+
+    warrior_final_boss(vida, buffArmor, helpCivilian, purifiedBeast)
+
+
 
 def mage_path():
     vidaInicial = 30

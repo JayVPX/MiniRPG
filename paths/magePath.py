@@ -266,16 +266,20 @@ def mage_library(vida: float, armor: bool):
         print()
         print("Com certo receio, você então aproxima sua mão ao livro de azul...")
         print("O silêncio anormal da biblioteca, faz você ouvir seus batimentos e respiração tão altos, como se fosse música na taverna mais animada de Valtherra.\n")
+        time.sleep(2)
       
         print("Ao abrir o livro azul, as runas presentes dentro começam a queimar com a energia arcana.")
         print("E então, o tão ansioso silêncio foi substituído.")
         print("O Altar começa a tremer, rangendo como uma máquina que a muito não encontra um óleo.\n")
+        time.sleep(2)
         
         print("Ao seu redor você começa a ver vultos se movendo das velhas estandes de livro")
         print("Brevemente, com várias brilhando em cores diversas.\n")
+        time.sleep(2)
         
         print("Sem muita surpresa você entendeu... Era uma armadilha")
         print("Os vultos eram Livros Amaldiçoados, vários deles...\n")
+        time.sleep(2)
 
         print("Entretanto no meio do caos luminoso dos livros, você percebe, que em uma das estandes, uma passagem foi aberta.")
         print("Você percebe, que não consegue correr diretamente para a entrada recém aberta, pois os livros estão sob ela.\n")
@@ -1013,7 +1017,8 @@ def mage_staircase(vida: float, armor: bool):
     time.sleep(2)
     print()
     print("Após deixar a biblioteca para trás, você chega em uma nova sala.\n")
-  
+    
+    input("Pressione ENTER, para prosseguir.")
 
     print("\n=== ESCADARIA DA TORRE ===\n")
 
@@ -1029,11 +1034,13 @@ def mage_staircase(vida: float, armor: bool):
 
     print("O silêncio aqui é estranho.")
     print("Não há vento ou criaturas.")
-    print("Ao lado da base dos primeiros degraus há várias estátuas antigas de guerreiros.")
+    print("Ao lado da base dos primeiros degraus há várias estátuas antigas de guerreiros.\n")
     time.sleep(2)
 
     print("Cada uma delas veste uma armadura completa e segura armas enferrujadas.")
-    print("Todas estão imóveis, cobertas de poeira e teias de aranha.")
+    print("Todas estão imóveis, cobertas de poeira e teias de aranha.\n")
+    time.sleep(2)
+    
     print("Você começa a subir lentamente os degraus da escadaria.")
     print("Cada passo ecoa pela sala.\n")
     time.sleep(2)
@@ -1053,7 +1060,7 @@ def mage_staircase(vida: float, armor: bool):
 
     print("1- Atacar incessantemente com feitiços contra a Armadura.")
     print("2- Usar feitiço de contenção contra a Armadura.")
-    print("3- Tentar purificar a maldição\n")
+    print("3- Purificar a maldição\n")
   
     show_life(vida)
 
@@ -1178,14 +1185,18 @@ def mage_pre_boss_intro(vida: float, armor: bool):
     time.sleep(2)
     print()
     print("Você se vê agora numa nova sala, não há nenhum lugar acima de onde você está.")
-    print("Logo você entende que chegou no último andar da torre.")
+    print("Logo você entende que chegou no último andar da torre.\n")
     time.sleep(2)
+
+    input("Pressione ENTER, para prosseguir")
 
     print("\n=== SALA DO LIMIAR ARCANO ===\n")
 
     print("O teto é alto e parcialmente destruído, permitindo que a luz pálida da lua atravesse as ruínas.")
     print("Partículas de poeira flutuam lentamente pelo ar, iluminadas pela luz prateada.")
-    print("As paredes estão rachadas pelo tempo.")
+    print("As paredes estão rachadas pelo tempo.\n")
+    time.sleep(2)
+
     print("Estátuas quebradas de antigos magos observam a sala com rostos frios e desgastados.")
     print("Algumas perderam a cabeça, outras os braços, mas todas parecem apontar para o mesmo lugar.\n")
     time.sleep(2)
@@ -1197,20 +1208,20 @@ def mage_pre_boss_intro(vida: float, armor: bool):
     time.sleep(2)
     print("Uma enorme porta de pedra negra na extremidade oposta do salão.")
     print("Runas complexas percorrem toda a sua superfície, pulsando lentamente com energia arcana.\n")
-    
+    time.sleep(2)
     
     print("Mesmo à distância, você consegue sentir a pressão mágica emanando de trás daquela porta.\n")
 
-
     print("O ar aqui é pesado.")
     print("Denso com mana instável.\n")
-
+    time.sleep(2)
    
     print("Seu instinto de mago grita um aviso claro:\n")
 
     print("Algo poderoso está do outro lado.\n")
 
     print("Talvez o responsável pela corrupção que tomou esta torre.\n")
+    time.sleep(2)
 
     print("Seja o que for que habite além daquela porta...")
     print("Este é o último obstáculo da Torre da Lua Quebrada.\n")
@@ -1223,6 +1234,8 @@ def mage_pre_boss_intro(vida: float, armor: bool):
     print("O som é incessante e o peso era incômodo, mas ainda assim você consegue abrir.")
     print("Sabendo que agora não tem como voltar, você passa por ela.\n")
     time.sleep(2)
+
+    input("Pressione ENTER, para prosseguir.")
 
     print("\n=== APOSENTOS DO ARQUIMAGO ===\n")
 
@@ -1284,7 +1297,7 @@ def mage_boss_fight(vida: float, armor: bool):
 
     print('1- Lançar feitiços diretamente contra o Arcano')
     print('2- Atacar o grimório no centro da criatura')
-    print('3- Tentar destruir as runas que mantêm o corpo da entidade\n')
+    print('3- Destruir as runas ao redor da entidade\n')
 
     show_life(vida)
     escolha = input("> ")
@@ -1912,7 +1925,7 @@ def mage_end():
         print("Nas profundezas de uma fortaleza...")
         print("no coração da terra dos demônios")
         print("um trono se encontra no centro de uma sala")
-        print("E sobre ele...")
+        print("E sobre ele...\n")
         time.sleep(2)
 
         print("Aquele que um dia foi um mago...")
